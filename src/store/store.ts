@@ -8,19 +8,22 @@ import {
 // import counterReducer from '../features/counter/counterSlice';
 import nodeTypeReducer from './reducer/NodeTypeSlice';
 import { nodeTypeApi } from '../service/NodeTypeService';
-import { setupListeners } from '@reduxjs/toolkit/dist/query';
+import { copperSkApi } from '../service/CopperSkService';
 
 const rootReducer = combineReducers({
   // counterReducer,
   nodeTypeReducer,
-  [nodeTypeApi.reducerPath]: nodeTypeApi.reducer,
+  // [nodeTypeApi.reducerPath]: nodeTypeApi.reducer,
+  [copperSkApi.reducerPath]: copperSkApi.reducer,
 });
 
 export const setupStore = () => {
   return configureStore({
     reducer: rootReducer,
     middleware: (getDefaultMiddleware) =>
-      getDefaultMiddleware().concat(nodeTypeApi.middleware),
+      getDefaultMiddleware()
+        // .concat(nodeTypeApi.middleware)
+        .concat(copperSkApi.middleware),
   });
 };
 

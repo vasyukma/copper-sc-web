@@ -6,6 +6,7 @@ import { useAppDispatch } from './hook/redux';
 import { useAppSelector } from './hook/redux';
 // import { fetchNodeTypes } from './store/reducer/ActionCreators';
 import { NodeTypes } from './component/NodeTypes/NodeTypes';
+import Links from './component/Links/Links';
 
 function App() {
   // const dispatch = useAppDispatch();
@@ -36,7 +37,12 @@ function App() {
 
   return (
     <div className="App">
-      <NodeTypes />
+      {/* <div>
+        <NodeTypes />
+      </div> */}
+      <div>
+        <Links />
+      </div>
     </div>
   );
 }
