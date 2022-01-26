@@ -1,5 +1,7 @@
-import { nodeTypeApi } from '../service/NodeTypeService';
-import NodeTypeItem from './NodeTypeItem';
+
+import { nodeTypeApi } from '../../service/NodeTypeService';
+import NodeTypeItem from './NodeType/NodeType';
+import './NodeTypes.css'
 
 export function NodeTypes() {
   const {
@@ -9,7 +11,7 @@ export function NodeTypes() {
   } = nodeTypeApi.useFetchAllNodeTypesQuery('');
 
   return (
-    <div>
+    <div className="ListItems">
       {isLoading && <h1>Идёт загрузка...</h1>}
       {error && <h1>Произошла ошибка</h1>}
       {nodeTypes &&
@@ -20,6 +22,8 @@ export function NodeTypes() {
             </div>
           );
         })}
+
+        
     </div>
   );
 }

@@ -5,7 +5,7 @@ import './App.css';
 import { useAppDispatch } from './hook/redux';
 import { useAppSelector } from './hook/redux';
 // import { fetchNodeTypes } from './store/reducer/ActionCreators';
-import { NodeTypes } from './component/NodeTypes';
+import { NodeTypes } from './component/NodeTypes/NodeTypes';
 
 function App() {
   // const dispatch = useAppDispatch();

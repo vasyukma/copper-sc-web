@@ -1,0 +1,10 @@
+.Item {
+  display: flex;
+  /* align-items: center; */
+  /* justify-content: center; */
+}
+
+.Item_element {
+  color: blueviolet;
+  padding: 0px 10px;
+}
