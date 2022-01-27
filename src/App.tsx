@@ -1,47 +1,23 @@
-import React, { useEffect } from 'react';
-// import logo from './logo.svg';
-// import { Counter } from './features/counter/Counter';
-import './App.css';
-import { useAppDispatch } from './hook/redux';
-import { useAppSelector } from './hook/redux';
-// import { fetchNodeTypes } from './store/reducer/ActionCreators';
-import { NodeTypes } from './component/NodeTypes/NodeTypes';
-import Links from './component/Links/Links';
+import React, { useEffect } from "react";
+import "./App.css";
+import Links from "./component/Links/Links";
+import { Route, Routes } from "react-router-dom";
+import Navi from "./component/Navi/Navi";
+import Nodes from "./component/Nodes/Nodes";
 
 function App() {
-  // const dispatch = useAppDispatch();
-  // const { nodeTypes, isLoading, error } = useAppSelector(
-  //   (state) => state.nodeTypeReducer
-  // );
-
-  // useEffect(() => {
-  //   dispatch(fetchNodeTypes());
-  // }, []);
-
-  // return (
-  //   <div className="App">
-  //     {isLoading && <h1>Идёт загрузка...</h1>}
-  //     {error && <h1>{error}</h1>}
-  //     {/* {JSON.stringify(nodeTypes, null, 2)} */}
-  //     {nodeTypes.map((item) => {
-  //       return (
-  //         <div>
-  //           <span>{item.id}</span>
-  //           <span>{item.shortName}</span>
-  //           <span>{item.description}</span>
-  //         </div>
-  //       );
-  //     })}
-  //   </div>
-  // );
-
   return (
     <div className="App">
-      {/* <div>
-        <NodeTypes />
-      </div> */}
       <div>
-        <Links />
+        <Navi />
+      </div>
+      <div>
+        <Routes>
+          <Route path="/cable-list" element={<Links />} />
+          <Route path="/nodes" element={<Nodes />} />
+          <Route path="/" element={<Links />} />
+          {/* <Route path="about" element={<About />} /> */}
+        </Routes>
       </div>
     </div>
   );

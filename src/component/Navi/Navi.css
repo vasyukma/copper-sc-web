@@ -1,0 +1,12 @@
+.Wrapper {
+}
+
+.Navi {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.Navi__Item {
+  padding: 10px;
+  border: 1px solid #ece89d;
+}

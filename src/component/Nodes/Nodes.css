@@ -1,0 +1,15 @@
+.Wrapper {
+}
+
+.Component {
+}
+
+.Component_Data {
+  display: flex;
+  /* flex-wrap: wrap; */
+}
+
+.Component__Item {
+  padding: 10px;
+  border: 1px solid red;
+}
