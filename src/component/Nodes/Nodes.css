@@ -2,14 +2,18 @@
 }
 
 .Component {
+  display: flex;
+  border: 1px solid red;
 }
 
-.Component_Data {
+.Component__Data {
   display: flex;
+  justify-content: center;
   /* flex-wrap: wrap; */
+  border: 1px solid yellowgreen;
 }
 
 .Component__Item {
-  padding: 10px;
-  border: 1px solid red;
+  padding: 5px;
+  border: 1px solid blueviolet;
 }

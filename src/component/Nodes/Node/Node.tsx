@@ -1,6 +1,6 @@
-import { FC } from "react";
-import { INode } from "../../../model/INode";
-import { copperSkApi } from "../../../service/CopperSkService";
+import { FC } from 'react';
+import { INode } from '../../../model/INode';
+import { copperSkApi } from '../../../service/CopperSkService';
 
 export function getNode(node: INode) {
   return <Node node={node} />;
@@ -24,10 +24,10 @@ const Node: FC<NodeItemProps> = ({ node }) => {
       <div>
         <div>Cildren</div>
         {/* <div>{children && getNode(rootNode)}</div> */}
-        {children &&
+        {/* {children &&
           children.map((item) => {
             // return <Node node={node} />;
-          })}
+          })} */}
       </div>
     </div>
   );
