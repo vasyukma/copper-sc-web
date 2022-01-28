@@ -1,12 +1,12 @@
-import { FC } from 'react';
-import { INode } from '../../../model/INode';
-import { copperSkApi } from '../../../service/CopperSkService';
+import { FC } from "react";
+import { INode } from "../../../model/INode";
+import { copperSkApi } from "../../../service/CopperSkService";
 
-interface NodeItemProps {
+interface TreeNodeItemProps {
   node: INode;
 }
 
-const BranchNode: FC<NodeItemProps> = ({ node }) => {
+const BranchNode: FC<TreeNodeItemProps> = ({ node }) => {
   const {
     data: children,
     error,
@@ -33,7 +33,7 @@ export function getNode(node: INode) {
   return <TreeNode node={node} />;
 }
 
-const TreeNode: FC<NodeItemProps> = ({ node }) => {
+const TreeNode: FC<TreeNodeItemProps> = ({ node }) => {
   debugger;
   return (
     <div>

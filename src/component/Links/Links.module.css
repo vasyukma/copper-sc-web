@@ -1,0 +1,31 @@
+.Wrapper {
+  height: 100%;
+  min-height: 100%;
+  margin: 0px;
+  max-width: 190mm;
+}
+
+.Title {
+}
+
+.Title__Text {
+  /* color: red; */
+}
+
+.Block__Row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.Block__Column {
+  border: 1px solid #5e5373;
+  height: 8.5mm;
+  width: 16.5mm;
+}
+
+.Block__Item {
+  font-size: auto;
+  text-align: center;
+  line-height: 8.5mm;
+  font-weight: 700;
+}

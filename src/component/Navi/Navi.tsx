@@ -1,16 +1,22 @@
+import { FC } from "react";
 import { Link } from "react-router-dom";
-import "./Navi.css";
+import styles from "./Navi.module.css";
 
-export const Navi = () => {
+interface NaviItemProps {
+  selected: string;
+}
+
+export const Navi: FC<NaviItemProps> = ({ selected }) => {
   return (
-    <div className="Wrapper">
-      <div className="Navi">
-        <div className="Navi__Item">
-          <Link to="/cable-list">Кабельный журнал</Link>
-        </div>
-        <div className="Navi__Item">
-          <Link to="/nodes">Узлы</Link>
-        </div>
+    <div className={styles.block}>
+      <div className={`${styles.item} ${selected} ? ${styles.selected}`}>
+        <Link to="/cable-list">Кабельный журнал</Link>
+      </div>
+      <div className={styles.item}>
+        <Link to="/labels">Этикирование</Link>
+      </div>
+      <div className={styles.item}>
+        <Link to="/nodes">Узлы</Link>
       </div>
     </div>
   );

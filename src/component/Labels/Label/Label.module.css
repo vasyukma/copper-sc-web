@@ -1,0 +1,8 @@
+.Item {
+  display: flex;
+}
+
+.Item_Element {
+  color: blueviolet;
+  padding: 0px 10px;
+}
