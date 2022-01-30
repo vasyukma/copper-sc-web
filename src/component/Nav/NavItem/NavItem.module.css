@@ -1,0 +1,11 @@
+.block {
+}
+
+.element {
+  padding: 10px;
+  border: 1px solid #ece89d;
+}
+
+.element_active {
+  background-color: bisque;
+}

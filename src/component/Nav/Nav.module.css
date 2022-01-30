@@ -1,0 +1,14 @@
+.block {
+}
+
+.element {
+}
+
+.element_active {
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: azure;
+}
