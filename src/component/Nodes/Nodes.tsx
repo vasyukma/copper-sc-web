@@ -1,18 +1,15 @@
-import { FC, ReactComponentElement, ReactElement } from "react";
-import { useParams } from "react-router-dom";
-import { INode } from "../../model/INode";
-import { copperSkApi } from "../../service/CopperSkService";
-import Node, { getNode } from "./Node/Node";
-import "./Nodes.css";
-import TreeNode from "./NodeTree/TreeNode";
+import { useParams } from 'react-router-dom';
+import { copperSkApi } from '../../service/CopperSkService';
+import Node from './Node/Node';
+import styles from './Nodes.module.css';
 
 function getTest(text: string): string {
-  return "text";
+  return 'text';
 }
 
 const Nodes = () => {
-  debugger;
-  let { id } = useParams<"id">();
+  // debugger;
+  let { id } = useParams<'id'>();
   let rootNodeId = 143;
   if (id) {
     rootNodeId = Number(id);
@@ -20,24 +17,31 @@ const Nodes = () => {
 
   const {
     data: rootNode,
-    error,
-    isLoading,
+    error: fetchRootError,
+    isLoading: fetchRootIsLoading,
+  } = copperSkApi.useFetchRootNodeQuery('');
+  // } = copperSkApi.useFetchNodeQuery(rootNodeId);
+
+  const {
+    data: children,
+    error: fecthChildredError,
+    isLoading: fetchChildrenError,
     // } = copperSkApi.useFetchRootNodeQuery('');
   } = copperSkApi.useFetchNodeQuery(rootNodeId);
 
   // rootNode && getNode(rootNode);
 
-  debugger;
+  // debugger;
   return (
-    <div className="Wrapper">
+    <div className={styles.block}>
       <h1>!!!</h1>
-      <div className="Component">
-        <div className="Component__Title">
-          {isLoading && <h1>Идёт загрузка...</h1>}
-          {error && <h1>Произошла ошибка</h1>}
+      <div className={styles.element}>
+        <div className={styles.element}>
+          {fetchRootIsLoading && <h1>Идёт загрузка...</h1>}
+          {fetchRootError && <h1>Произошла ошибка</h1>}
         </div>
-        <div className="Component__Data">
-          {rootNode && <Node node={rootNode} />}
+        <div className={styles.element}>
+          {/* {rootNode && <Node node={rootNode} />} */}
         </div>
       </div>
     </div>
