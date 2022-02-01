@@ -25,6 +25,11 @@ export const copperSkApi = createApi({
         url: `/nodes/${nodeId}/children`,
       }),
     }),
+    fetchNodeParentsCount: build.query<number, number>({
+      query: (nodeId) => ({
+        url: `/nodes/${nodeId}/parents-count`,
+      }),
+    }),
     fetchRootNode: build.query<INode, string>({
       query: () => ({
         url: `/nodes/root`,

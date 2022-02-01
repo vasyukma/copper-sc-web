@@ -1,0 +1,7 @@
+.Wrapper {
+  display: flex;
+}
+
+.Content {
+  padding: 5px;
+}

@@ -1,0 +1,8 @@
+.wrapper {
+  display: flex;
+  background-color: rgb(241, 196, 137);
+}
+
+.content {
+  display: flex;
+}

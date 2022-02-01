@@ -1,0 +1,8 @@
+{
+  "explorer.openEditors.visible": 2,
+  "explorer.sortOrder": "type",
+  "explorer.autoReveal": false,
+  "explorer.copyRelativePathSeparator": "/",
+  "workbench.tree.indent": 22,
+  "workbench.tree.expandMode": "doubleClick"
+}

@@ -30,21 +30,3 @@ function Navi() {
     </div>
   );
 }
-
-// {
-/* <div className={styles.block}>
-<div
-  className={`${styles.item}  ${
-    location.pathname == links.cableList && styles.item_active
-  }`}
->
-  <Link to={links.cableList}>Кабельный журнал</Link>
-</div>
-<div className={styles.item}>
-  <Link to={links.lables}>Этикирование</Link>
-</div>
-<div className={styles.item}>
-  <Link to={links.nodes}>Узлы</Link>
-</div>
-</div> */
-// }

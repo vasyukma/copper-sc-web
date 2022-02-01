@@ -1,0 +1,16 @@
+.Wrapper {
+  padding: 2px;
+}
+
+.Data {
+  display: flex;
+}
+
+.Item {
+  background-color: rgb(180, 200, 218);
+  padding: 3px;
+}
+
+.Active {
+  background-color: beige;
+}
