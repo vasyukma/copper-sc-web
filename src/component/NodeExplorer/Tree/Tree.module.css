@@ -1,0 +1,8 @@
+.Wrapper {
+  display: flex;
+}
+
+.Data {
+  display: flex;
+  flex-direction: column;
+}
