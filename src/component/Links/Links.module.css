@@ -1,8 +1,9 @@
-.Wrapper {
-  height: 100%;
-  min-height: 100%;
-  margin: 0px;
-  max-width: 190mm;
+.wrapper {
+  display: flex;
+  /* height: 100%; */
+  /* min-height: 100%; */
+  /* margin: 0px; */
+  /* max-width: 190mm; */
 }
 
 .Title {

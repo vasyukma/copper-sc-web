@@ -15,7 +15,7 @@ export const copperSkApi = createApi({
         url: `/links`,
       }),
     }),
-    fetchLinkTails: build.query<ITail[], string>({
+    fetchTailsLink: build.query<ITail[], number>({
       query: (linkId) => ({
         url: `/links/${linkId}/tails`,
       }),
@@ -23,6 +23,11 @@ export const copperSkApi = createApi({
     fetchChildrenNode: build.query<INode[], number>({
       query: (nodeId) => ({
         url: `/nodes/${nodeId}/children`,
+      }),
+    }),
+    fetchPathNode: build.query<INode[], number>({
+      query: (nodeId) => ({
+        url: `/nodes/${nodeId}/path`,
       }),
     }),
     fetchNodeParentsCount: build.query<number, number>({

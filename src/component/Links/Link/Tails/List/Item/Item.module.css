@@ -1,0 +1,11 @@
+.wrapper {
+  background-color: antiquewhite;
+}
+
+.selected {
+  background-color: yellowgreen;
+}
+
+.wrapper:hover {
+  background-color: chartreuse;
+}

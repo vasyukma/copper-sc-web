@@ -1,16 +1,23 @@
-import { ILink } from "../../../model/ILink";
-import { FC } from "react";
-import stylesParent from "../Links.module.css";
-import styles from "./Link.module.css";
+import { FC } from 'react';
+import { useSelector } from 'react-redux';
+import { RootState } from '../../../store/store';
+import Form from './Form/Form';
+import styles from './Link.module.css';
+import Tail from './Tail/Tail';
+import Tails from './Tails/Tails';
 
-interface LinkItemProps {
-  item: ILink;
-}
+interface LinkItemProps {}
 
-const Link: FC<LinkItemProps> = ({ item }) => {
+const Link: FC<LinkItemProps> = () => {
+  let currentLink = useSelector(
+    (state: RootState) => state.linksSlice.currentLink
+  );
+
   return (
-    <div className={stylesParent.Block__Column}>
-      <div className={stylesParent.Block__Item}>{item.shortName}</div>
+    <div className={styles.wrapper}>
+      {currentLink && <Form link={currentLink} />}
+      {currentLink && <Tails link={currentLink} />}
+      {currentLink && <Tail />}
     </div>
   );
 };

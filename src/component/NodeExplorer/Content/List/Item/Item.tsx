@@ -14,7 +14,7 @@ const Item: FC<IProps> = ({ node }) => {
   const dispatch = useDispatch();
   let [stylesWrapper, setStylesWrapper] = useState(styles.wrapper);
   let selectedNode = useSelector(
-    (state: RootState) => state.nodeExplorer.selectedNode
+    (state: RootState) => state.nodeExplorerSlice.selectedNode
   );
   useEffect(() => {
     node.id === selectedNode?.id

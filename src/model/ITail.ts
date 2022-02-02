@@ -1,5 +1,6 @@
 export interface ITail {
-  id: bigint;
-  linkId: bigint;
-  nodeId: bigint;
+  id: number;
+  linkId: number;
+  nodeId: number;
+  description: string;
 }

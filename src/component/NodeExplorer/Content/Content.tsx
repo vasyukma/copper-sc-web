@@ -10,7 +10,7 @@ interface IProps {}
 
 const Content: FC<IProps> = () => {
   let currentNode = useSelector(
-    (state: RootState) => state.nodeExplorer.currentNode
+    (state: RootState) => state.nodeExplorerSlice.currentNode
   );
   const nodeExplorerDispatch = useDispatch();
 

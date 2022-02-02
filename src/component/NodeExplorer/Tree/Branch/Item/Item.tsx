@@ -12,7 +12,7 @@ export const Item: React.FC<IProps> = ({ node }) => {
   const dispatch = useDispatch();
 
   let currentNode = useSelector(
-    (state: RootState) => state.nodeExplorer.currentNode
+    (state: RootState) => state.nodeExplorerSlice.currentNode
   );
 
   let [active, setActive] = useState<boolean>(false);

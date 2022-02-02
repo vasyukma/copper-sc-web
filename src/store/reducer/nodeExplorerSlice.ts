@@ -11,7 +11,7 @@ const initialState: IInitialState = {
   selectedNode: undefined,
 };
 
-const nodeExplorer = createSlice({
+const nodeExplorerSlice = createSlice({
   name: 'nodeTree',
   initialState: initialState,
   reducers: {
@@ -24,6 +24,6 @@ const nodeExplorer = createSlice({
   },
 });
 
-export default nodeExplorer.reducer;
+export default nodeExplorerSlice.reducer;
 
-export const { setCurrentNode, setSelectedNode } = nodeExplorer.actions;
+export const { setCurrentNode, setSelectedNode } = nodeExplorerSlice.actions;
