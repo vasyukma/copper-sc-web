@@ -1,0 +1,19 @@
+.wrapper {
+  display: flex;
+  background-color: darkkhaki;
+}
+
+.content {
+  padding: 2px;
+}
+
+.table {
+  /* background-color: aqua; */
+  /* border: 1px, solid, rebeccapurple; */
+  /* border-width: 1px; */
+  border-style: solid;
+  /* border */
+}
+.td {
+  background-color: aquamarine;
+}

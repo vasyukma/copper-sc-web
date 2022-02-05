@@ -1,5 +1,5 @@
 import { Route, Routes } from 'react-router-dom';
-import './App.css';
+import styles from './App.module.css';
 import Labels from './component/Labels/Labels';
 import Links from './component/Links/Links';
 import Nav from './component/Nav/Nav';
@@ -9,9 +9,8 @@ import { CableList } from './component/CableList/CableList';
 
 function App() {
   return (
-    <div className="App">
-      {/* <div><Navi /></div> */}
-      <div>
+    <div className={styles.wrapper}>
+      <div className={styles.content}>
         <Routes>
           <Route path="/" element={<Nav />}>
             <Route index element={<Explorer />} />
@@ -22,7 +21,6 @@ function App() {
             <Route path="/nodes/:id" element={<Nodes />} />
             <Route path="/links" element={<Links />} />
           </Route>
-          {/* <Route path="about" element={<About />} /> */}
         </Routes>
       </div>
     </div>

@@ -1,0 +1,11 @@
+.wrapper {
+  padding: 0px 5px 0px 5px;
+}
+
+.wrapper:hover {
+  background-color: orange;
+}
+
+.selected {
+  background-color: orangered;
+}

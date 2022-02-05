@@ -1,11 +1,28 @@
 import { FC } from 'react';
 import styles from './Item.module.css';
+import { ILink } from '../../../../model/ILink';
 
-interface IProps {}
-export const Item: FC<IProps> = ({}) => {
+interface IProps {
+  link: ILink;
+}
+export const Item: FC<IProps> = ({ link }) => {
   return (
-    <div className={styles.wrapper}>
-      <div className={styles.content}></div>
-    </div>
+    <tr className={styles.td}>
+      <td></td>
+      <td>{link.name}</td>
+      <td>111</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
   );
 };

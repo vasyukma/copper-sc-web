@@ -1,28 +1,28 @@
 import { Outlet } from 'react-router-dom';
 import styles from './Nav.module.css';
-import NavItem from './NavItem/NavItem';
+import Item from './Item/Item';
 
 export default Navi;
 
 function Navi() {
   return (
-    <div className={styles.block}>
-      <div className={styles.nav}>
+    <div className={styles.wrapper}>
+      <div className={styles.content}>
         {/* <nav> */}
         <div className={styles.element}>
-          <NavItem to="/">Home</NavItem>
+          <Item to="/">Home</Item>
         </div>
         <div className={styles.element}>
-          <NavItem to="/cable-list">Кабельный журнал</NavItem>
+          <Item to="/cable-list">Кабельный журнал</Item>
         </div>
         <div className={styles.element}>
-          <NavItem to="/labels">Этикирование</NavItem>
+          <Item to="/labels">Этикирование</Item>
         </div>
         <div className={styles.element}>
-          <NavItem to="/node-explorer">Узлы</NavItem>
+          <Item to="/node-explorer">Узлы</Item>
         </div>
         <div className={styles.element}>
-          <NavItem to="/links">Линии</NavItem>
+          <Item to="/links">Линии</Item>
         </div>
         {/* </nav> */}
       </div>

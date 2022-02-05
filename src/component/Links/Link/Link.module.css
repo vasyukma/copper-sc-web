@@ -1,10 +1,5 @@
-.Item {
+.wrapper {
   display: flex;
   /* align-items: center; */
   /* justify-content: center; */
-}
-
-.Item_Element {
-  color: blueviolet;
-  padding: 0px 10px;
 }

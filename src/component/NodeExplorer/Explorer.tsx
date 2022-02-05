@@ -1,5 +1,5 @@
 import { copperSkApi } from '../../service/CopperSkService';
-import Content from './Content/Content';
+import Node from './Node/Node';
 import styles from './Explorer.module.css';
 import Tree from './Tree/Tree';
 import { useDispatch } from 'react-redux';
@@ -27,7 +27,7 @@ const Explorer = () => {
         {rootNode && <Tree root={rootNode} />}
       </div>
       <div className={styles.Data}>
-        <Content />
+        <Node />
       </div>
     </div>
   );

@@ -1,14 +1,12 @@
-.block {
-}
-
-.element {
-}
-
-.element_active {
-}
-
-.nav {
+.wrapper {
   display: flex;
-  flex-wrap: wrap;
-  background-color: azure;
+  flex-direction: column;
+}
+
+.content {
+  display: flex;
+  min-height: 26px;
+  max-height: 26px;
+  margin: 1px;
+  background-color: lightslategray;
 }

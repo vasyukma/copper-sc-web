@@ -1,8 +1,10 @@
-.Wrapper {
+.wrapper {
   display: flex;
 }
 
-.Data {
+.data {
   display: flex;
   flex-direction: column;
+  /* background-color: blue;
+  margin: 5px; */
 }

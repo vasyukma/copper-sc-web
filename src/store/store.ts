@@ -1,11 +1,14 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import { copperSkApi } from '../service/CopperSkService';
-import nodeExplorer from './reducer/nodeExplorerSlice';
+import nodeExplorerSlice from './reducer/nodeExplorerSlice';
 import nodeTypeReducer from './reducer/NodeTypeSlice';
+import linksSlice from './reducer/linksSlice';
 
 const rootReducer = combineReducers({
-  nodeExplorer,
+  linksSlice,
+  nodeExplorerSlice,
   nodeTypeReducer,
+
   // [nodeTypeApi.reducerPath]: nodeTypeApi.reducer,
   [copperSkApi.reducerPath]: copperSkApi.reducer,
 });

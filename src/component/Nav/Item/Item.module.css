@@ -1,0 +1,10 @@
+.wrapper {
+  display: flex;
+  margin: 1px;
+  padding: 3px;
+  background-color: white;
+}
+
+.wrapper_active {
+  background-color: rgb(255, 201, 201);
+}

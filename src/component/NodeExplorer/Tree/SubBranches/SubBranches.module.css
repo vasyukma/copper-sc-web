@@ -1,6 +1,4 @@
-.Wrapper {
+.wrapper {
   display: flex;
-}
-
-.Data {
+  flex-direction: column;
 }

@@ -1,8 +1,8 @@
-.Item {
+.item {
   display: flex;
 }
 
-.Item_Element {
+.item_element {
   color: blueviolet;
   padding: 0px 10px;
 }

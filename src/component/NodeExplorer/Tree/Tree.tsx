@@ -9,8 +9,8 @@ interface ITree {
 
 const Tree: FC<ITree> = ({ root }) => {
   return (
-    <div className={styles.Wrapper}>
-      <div className={styles.Data}>
+    <div className={styles.wrapper}>
+      <div className={styles.data}>
         <Branch node={root} indent="" />
       </div>
     </div>
