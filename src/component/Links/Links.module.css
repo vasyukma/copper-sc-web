@@ -1,32 +1,11 @@
 .wrapper {
   display: flex;
-  /* height: 100%; */
-  /* min-height: 100%; */
-  /* margin: 0px; */
-  /* max-width: 190mm; */
+  /* justify-content: center; */
+  height: calc(100% - 30px);
+  background-color: goldenrod;
+  margin: 1px;
 }
 
-.Title {
-}
-
-.Title__Text {
-  /* color: red; */
-}
-
-.Block__Row {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.Block__Column {
-  border: 1px solid #5e5373;
-  height: 8.5mm;
-  width: 16.5mm;
-}
-
-.Block__Item {
-  font-size: auto;
-  text-align: center;
-  line-height: 8.5mm;
-  font-weight: 700;
+.item {
+  margin: 1px;
 }

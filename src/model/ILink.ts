@@ -1,14 +1,12 @@
 export interface ILink {
   id: number;
   name: string;
-  shortName: string;
-  longName: string;
-  cableBrand: string | null;
-  cabinetLength: number | null;
-  metalStructursLength: string | null;
-  cabelChannelLength: string | null;
-  reservLength: string | null;
-  parts: string | null;
+  cableBrand: string;
+  cabinetLength: number;
+  metalStructursLength: number;
+  cableChannelLength: number;
+  reserveLength: number;
+  parts: number;
+  length: number;
   description: string;
-  length: number | null;
 }

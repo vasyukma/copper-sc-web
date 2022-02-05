@@ -1,0 +1,13 @@
+.wrapper {
+  background-color: antiquewhite;
+  cursor: pointer;
+  user-select: none;
+}
+
+.selected {
+  background-color: lightcoral;
+}
+
+.wrapper:hover {
+  background-color: chartreuse;
+}

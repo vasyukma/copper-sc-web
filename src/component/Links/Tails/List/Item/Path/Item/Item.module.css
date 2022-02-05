@@ -1,0 +1,10 @@
+.wrapper {
+  display: flex;
+  /* margin: 2px; */
+  background-color: gold;
+}
+
+.item {
+  margin: 1px;
+  background-color: lightgoldenrodyellow;
+}

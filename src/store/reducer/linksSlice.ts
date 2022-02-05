@@ -1,15 +1,20 @@
+import { createSlice } from '@reduxjs/toolkit';
 import { ILink } from '../../model/ILink';
-import { createReducer, createSlice } from '@reduxjs/toolkit';
+import { INode } from '../../model/INode';
 import { ITail } from '../../model/ITail';
 
 interface IInitialState {
   currentLink: ILink | undefined;
   currentTail: ITail | undefined;
+  selectedPathNode: INode | undefined;
+  selectedChildrenNode: INode | undefined;
 }
 
 const initialState: IInitialState = {
   currentLink: undefined,
   currentTail: undefined,
+  selectedPathNode: undefined,
+  selectedChildrenNode: undefined,
 };
 
 export const linksSlice = createSlice({
@@ -23,9 +28,20 @@ export const linksSlice = createSlice({
     setCurrentTail(state, action) {
       state.currentTail = action.payload;
     },
+    setSelectedPathNode(state, action) {
+      state.selectedPathNode = action.payload;
+    },
+    setSelectedChildrenNode(state, action) {
+      state.selectedChildrenNode = action.payload;
+    },
   },
 });
 
 export default linksSlice.reducer;
 
-export const { setCurrentLink, setCurrentTail } = linksSlice.actions;
+export const {
+  setCurrentLink,
+  setCurrentTail,
+  setSelectedPathNode,
+  setSelectedChildrenNode,
+} = linksSlice.actions;

@@ -1,5 +1,4 @@
 import { FC } from 'react';
-import Path from './Path/Path';
 import styles from './Tail.module.css';
 import { useSelector } from 'react-redux';
 import { RootState } from '../../../../store/store';
@@ -11,7 +10,7 @@ export const Tail: FC<IProps> = ({}) => {
   );
   return (
     <div className={styles.wrapper}>
-      {currentTail && <Path tail={currentTail} />}
+      {/* {currentTail && <Path tail={currentTail} />} */}
     </div>
   );
 };

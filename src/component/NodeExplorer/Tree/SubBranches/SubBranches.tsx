@@ -10,7 +10,7 @@ interface ISubBranches {
 }
 
 const SubBranches: FC<ISubBranches> = ({ parentNode, indent }) => {
-  let [localIndent] = useState<string>(indent + '-');
+  let [localIndent] = useState<string>(indent + '--');
 
   const {
     data: subBranches,
@@ -19,12 +19,10 @@ const SubBranches: FC<ISubBranches> = ({ parentNode, indent }) => {
   } = copperSkApi.useFetchChildrenNodeQuery(parentNode.id);
 
   return (
-    <div className={styles.Wrapper}>
-      <div className={styles.Data}>
-        {subBranches?.map((node: INode) => (
-          <Branch node={node} indent={localIndent} />
-        ))}
-      </div>
+    <div className={styles.wrapper}>
+      {subBranches?.map((node: INode) => (
+        <Branch node={node} indent={localIndent} />
+      ))}
     </div>
   );
 };

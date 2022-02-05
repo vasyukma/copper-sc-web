@@ -27,7 +27,7 @@ export const Item: FC<IProps> = ({ link }) => {
       className={stylesWrapper}
       onClick={() => dispatch(setCurrentLink(link))}
     >
-      {link.shortName}
+      {link.name}
     </div>
   );
 };

@@ -1,5 +1,6 @@
 .Wrapper {
   display: flex;
+  margin: 1px;
   background-color: beige;
 }
 

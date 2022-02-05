@@ -9,7 +9,7 @@ export const Item: FC<IProps> = ({ link }) => {
   return (
     <tr className={styles.td}>
       <td></td>
-      <td>{link.shortName}</td>
+      <td>{link.name}</td>
       <td>111</td>
       <td></td>
       <td></td>
