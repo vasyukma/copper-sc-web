@@ -1,39 +1,25 @@
-import { FC, useEffect, useState } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import Node from './Node/Node';
-import styles from './NodesChildren.module.css';
+import { FC } from 'react';
+import { useSelector } from 'react-redux';
 import { copperSkApi } from '../../../../service/CopperSkService';
 import { RootState } from '../../../../store/store';
-import { INode } from '../../../../model/INode';
+import { Branch } from './Branch/Branch';
+import styles from './NodesChildren.module.css';
 
 interface IProps {}
-
-const fetchNodeChildren = (node: INode) => {
-  const { data: nodeChildren } = copperSkApi.useFetchChildrenNodeQuery(node.id);
-  return nodeChildren;
-};
 
 export const NodesChildren: FC<IProps> = ({}) => {
   let selectedPathNode = useSelector(
     (state: RootState) => state.linksSlice.selectedPathNode
   );
 
-  // const [nodeChildren, setNodeChildren] = useState<INode[]>();
+  const { data: rootNode } = copperSkApi.useFetchRootNodeQuery('');
 
-  // useEffect(() => {
-  //   selectedPathNode && setNodeChildren(fetchNodeChildren(selectedPathNode));
-  // });
-
-  const currentTail = useSelector(
-    (state: RootState) => state.linksSlice.currentTail
-  );
-
-  // debugger;
   return (
     <div className={styles.wrapper}>
       <div className={styles.content}>
-        {/* {nodeChildren?.} */}
-        NodesChildren{/* <Node nodes={currentTail.} */}
+        {selectedPathNode && rootNode && (
+          <Branch node={selectedPathNode} rootNode={rootNode} />
+        )}
       </div>
     </div>
   );

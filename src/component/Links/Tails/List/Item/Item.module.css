@@ -1,5 +1,5 @@
 .wrapper {
-  background-color: antiquewhite;
+  background-color: lavenderblush;
   cursor: pointer;
   user-select: none;
 }
@@ -10,4 +10,8 @@
 
 .wrapper:hover {
   background-color: chartreuse;
+}
+
+.pathText {
+  padding: 2px;
 }

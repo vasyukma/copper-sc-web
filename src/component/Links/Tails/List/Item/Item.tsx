@@ -11,10 +11,6 @@ interface IProps {
   tail: ITail;
 }
 export const Item: FC<IProps> = ({ tail }) => {
-  // let currentTail = useSelector(
-  //   (state: RootState) => state.linksSlice.currentTail
-  // );
-
   const { data: nodePath } = copperSkApi.useFetchNodePathQuery(tail.nodeId);
 
   const dispatch = useDispatch();
@@ -42,12 +38,12 @@ export const Item: FC<IProps> = ({ tail }) => {
       }}
     >
       {!isEdit && (
-        <div className={styles.content}>
-          {nodePath?.text}
-          {tail.id}
+        <div className={styles.pathText}>
+          {tail.id}-{nodePath?.text}
         </div>
       )}
-      {nodePath && isEdit && <Path tail={tail} path={nodePath} />}
+
+      {nodePath && isEdit && <Path tail={tail} />}
     </div>
   );
 };

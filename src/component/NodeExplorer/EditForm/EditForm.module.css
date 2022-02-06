@@ -1,0 +1,36 @@
+.wrapper {
+  display: flex;
+  width: 500px;
+  height: 500px;
+  background-color: lightsalmon;
+  padding: 20px;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.form {
+  display: flex;
+  width: 100%;
+  padding: 10px;
+}
+
+.element {
+  display: flex;
+  /* flex-direction: column; */
+  /* background-color: blue; */
+  /* width: 100%; */
+  /* justify-content: end; */
+}
+
+.label {
+  flex-grow: 1;
+}
+
+.input {
+  /* width: 100%; */
+  flex-grow: 7;
+}

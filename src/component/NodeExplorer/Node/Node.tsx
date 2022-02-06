@@ -1,10 +1,11 @@
 import { FC } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { RootState } from '../../../store/store';
-import styles from './Node.module.css';
-import Info from './Info/Info';
-import List from './List/List';
+import ControlPanel from './ControlPanel/ControlPanel';
+import InfoContainer from './Info/InfoContainer';
 import Header from './List/Header/Header';
+import List from './List/List';
+import styles from './Node.module.css';
 
 interface IProps {}
 
@@ -12,13 +13,17 @@ const Node: FC<IProps> = () => {
   let currentNode = useSelector(
     (state: RootState) => state.nodeExplorerSlice.currentNode
   );
-  const nodeExplorerDispatch = useDispatch();
+  // useSelector((state: RootState) => state.nodeExplorerSlice.isEditNode);
+  // const nodeExplorerDispatch = useDispatch();
 
   return (
     <div className={styles.Wrapper}>
+      <div className={styles.controlPanel}>
+        <ControlPanel />
+      </div>
       <div className={styles.Content}>
         <div className={styles.Info}>
-          {currentNode && <Info node={currentNode} />}
+          {currentNode && <InfoContainer node={currentNode} />}
         </div>
       </div>
       <div className={styles.Header}>{<Header />}</div>

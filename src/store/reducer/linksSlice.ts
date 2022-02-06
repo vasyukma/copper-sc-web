@@ -7,14 +7,16 @@ interface IInitialState {
   currentLink: ILink | undefined;
   currentTail: ITail | undefined;
   selectedPathNode: INode | undefined;
-  selectedChildrenNode: INode | undefined;
+  selectedNodeChildren: INode | undefined;
+  selectedChildNode: INode | undefined;
 }
 
 const initialState: IInitialState = {
   currentLink: undefined,
   currentTail: undefined,
   selectedPathNode: undefined,
-  selectedChildrenNode: undefined,
+  selectedNodeChildren: undefined,
+  selectedChildNode: undefined,
 };
 
 export const linksSlice = createSlice({
@@ -31,8 +33,11 @@ export const linksSlice = createSlice({
     setSelectedPathNode(state, action) {
       state.selectedPathNode = action.payload;
     },
-    setSelectedChildrenNode(state, action) {
-      state.selectedChildrenNode = action.payload;
+    setSelectedNodeChildren(state, action) {
+      state.selectedNodeChildren = action.payload;
+    },
+    setSelectedChildNode(state, action) {
+      state.selectedChildNode = action.payload;
     },
   },
 });
@@ -43,5 +48,6 @@ export const {
   setCurrentLink,
   setCurrentTail,
   setSelectedPathNode,
-  setSelectedChildrenNode,
+  setSelectedNodeChildren,
+  setSelectedChildNode,
 } = linksSlice.actions;

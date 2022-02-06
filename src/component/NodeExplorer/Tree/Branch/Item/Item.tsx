@@ -9,55 +9,24 @@ interface IProps {
   node: INode;
 }
 export const Item: React.FC<IProps> = ({ node }) => {
-  // const dispatch = useDispatch();
+  // const [active, setActive] = useState<boolean>(false);
+  // const [wrapperStyles, setWrapperStyles] = useState<string>(styles.Wrapper);
 
-  // let currentNode = useSelector(
+  // const currentNode = useSelector(
   //   (state: RootState) => state.nodeExplorerSlice.currentNode
   // );
-
-  // let [active, setActive] = useState<boolean>(false);
-  // let [stylesWrapper, setStylesWrapper] = useState<string>(styles.Wrapper);
 
   // useEffect(() => {
   //   currentNode?.id === node.id ? setActive(true) : setActive(false);
 
   //   active
-  //     ? setStylesWrapper(`${styles.Wrapper} ${styles.Active}`)
-  //     : setStylesWrapper(styles.Wrapper);
+  //     ? setWrapperStyles(`${styles.wrapper} ${styles.active}`)
+  //     : setWrapperStyles(styles.wrapper);
   // });
-
-  // const dispatch = useDispatch();
-
-  const [active, setActive] = useState<boolean>(false);
-  const [wrapperStyles, setWrapperStyles] = useState<string>(styles.Wrapper);
-
-  const currentNode = useSelector(
-    (state: RootState) => state.nodeExplorerSlice.currentNode
-  );
-
-  useEffect(() => {
-    currentNode?.id === node.id ? setActive(true) : setActive(false);
-
-    active
-      ? setWrapperStyles(`${styles.wrapper} ${styles.active}`)
-      : setWrapperStyles(styles.wrapper);
-  });
-
-  // const [showSubBranches, setShowSubBranch] = useState(false);
-  // const onShowSubBranches = () => {
-  //   if (showSubBranches) {
-  //     setShowSubBranch(false);
-  //   } else {
-  //     setShowSubBranch(true);
-  //   }
-  // };
 
   return (
     <div className={styles.wrapper}>
-      <div
-        className={styles.content}
-        // onClick={() => dispatch(setCurrentNode(node))}
-      >
+      <div className={styles.content}>
         {`${node.shortName} ${node.type.longName}`}
       </div>
     </div>

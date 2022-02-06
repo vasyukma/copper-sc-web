@@ -1,0 +1,14 @@
+.wrapper {
+  background-color: lightsteelblue;
+}
+
+.item {
+  padding: 2px;
+}
+
+.editForm {
+  position: absolute;
+  top: 25%;
+  right: 25%;
+  line-height: 1px;
+}

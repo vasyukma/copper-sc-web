@@ -1,5 +1,5 @@
 export interface INodeType {
-  id: bigint;
+  id: number;
   shortName: string;
   longName: string;
   description: string;

@@ -5,22 +5,14 @@
   user-select: none;
 }
 
-.data {
+.item {
   display: flex;
 }
 
-.data:hover {
+.item:hover {
   background-color: rgb(238, 144, 238);
 }
 
-.active {
+.selected {
   background-color: coral;
-}
-
-.indent {
-  margin-left: 2px;
-  margin-right: 2px;
-}
-
-.branch_content {
 }

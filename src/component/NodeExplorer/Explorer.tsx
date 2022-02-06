@@ -1,13 +1,20 @@
-import { copperSkApi } from '../../service/CopperSkService';
-import Node from './Node/Node';
-import styles from './Explorer.module.css';
-import Tree from './Tree/Tree';
-import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { copperSkApi } from '../../service/CopperSkService';
 import { setCurrentNode } from '../../store/reducer/nodeExplorerSlice';
+import { RootState } from '../../store/store';
+import EditFormContainer from './EditForm/EditFormContainer';
+import { EditFrom } from './EditForm/EditForm';
+import styles from './Explorer.module.css';
+import Node from './Node/Node';
+import Tree from './Tree/Tree';
 
 const Explorer = () => {
-  let dispatch = useDispatch();
+  // const isEditNode = useSelector(
+  //   (state: RootState) => state.nodeExplorerSlice.isEditNode
+  // );
+
+  const dispatch = useDispatch();
 
   const {
     data: rootNode,
@@ -17,7 +24,7 @@ const Explorer = () => {
 
   useEffect(() => {
     dispatch(setCurrentNode(rootNode));
-  });
+  }, []);
 
   return (
     <div className={styles.Wrapper}>
@@ -29,6 +36,11 @@ const Explorer = () => {
       <div className={styles.Data}>
         <Node />
       </div>
+      {/* {isEditNode && (
+        <div className={styles.editForm}>
+          <Conteiner />
+        </div>
+      )} */}
     </div>
   );
 };

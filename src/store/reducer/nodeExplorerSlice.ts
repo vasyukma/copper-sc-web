@@ -4,11 +4,13 @@ import { INode } from '../../model/INode';
 interface IInitialState {
   currentNode: INode | undefined;
   selectedNode: INode | undefined;
+  isEditNode: boolean;
 }
 
 const initialState: IInitialState = {
   currentNode: undefined,
   selectedNode: undefined,
+  isEditNode: false,
 };
 
 const nodeExplorerSlice = createSlice({
@@ -17,13 +19,20 @@ const nodeExplorerSlice = createSlice({
   reducers: {
     setCurrentNode(state, action) {
       state.currentNode = action.payload;
+      if (state.isEditNode) {
+        state.isEditNode = false;
+      }
     },
     setSelectedNode(state, action) {
       state.selectedNode = action.payload;
+    },
+    setIsEditNode(state, action) {
+      state.isEditNode = action.payload;
     },
   },
 });
 
 export default nodeExplorerSlice.reducer;
 
-export const { setCurrentNode, setSelectedNode } = nodeExplorerSlice.actions;
+export const { setCurrentNode, setSelectedNode, setIsEditNode } =
+  nodeExplorerSlice.actions;

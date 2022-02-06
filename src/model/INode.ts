@@ -6,5 +6,6 @@ export interface INode {
   longName: string;
   description: string;
   type: INodeType;
+  typeId: number | undefined;
   parentId: number;
 }

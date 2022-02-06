@@ -2,8 +2,8 @@ import { FC } from 'react';
 import { useSelector } from 'react-redux';
 import { RootState } from '../../../store/store';
 import { List } from './List/List';
-import styles from './Tails.module.css';
 import { NodesChildren } from './NodesChildren/NodesChildren';
+import styles from './Tails.module.css';
 
 interface IProps {}
 export const Tails: FC<IProps> = ({}) => {

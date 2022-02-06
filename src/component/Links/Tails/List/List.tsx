@@ -1,6 +1,7 @@
 import { FC } from 'react';
 import { ILink } from '../../../../model/ILink';
 import { copperSkApi } from '../../../../service/CopperSkService';
+import ControlPanel from './ControlPanel/ControlPanel';
 import { Item } from './Item/Item';
 import styles from './List.module.css';
 
@@ -12,6 +13,9 @@ export const List: FC<IProps> = ({ link }) => {
 
   return (
     <div className={styles.wrapper}>
+      <div className={styles.controlPanel}>
+        <ControlPanel />
+      </div>
       {tails && (
         <div className={styles.element}>
           {tails.map((tail) => (

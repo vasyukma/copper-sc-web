@@ -4,7 +4,10 @@ import { INode } from '../../../../../model/INode';
 import { FC, useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { RootState } from '../../../../../store/store';
-import { setSelectedNode } from '../../../../../store/reducer/nodeExplorerSlice';
+import {
+  setIsEditNode,
+  setSelectedNode,
+} from '../../../../../store/reducer/nodeExplorerSlice';
 
 interface IProps {
   node: INode;
