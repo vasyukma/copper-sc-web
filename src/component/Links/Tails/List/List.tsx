@@ -9,7 +9,7 @@ interface IProps {
   link: ILink;
 }
 export const List: FC<IProps> = ({ link }) => {
-  const { data: tails } = copperSkApi.useFetchTailsLinkQuery(link.id);
+  const { data: tails } = copperSkApi.useFetchLinkTailsQuery(link.id);
 
   return (
     <div className={styles.wrapper}>

@@ -1,8 +1,8 @@
 .wrapper {
   display: flex;
-  width: 500px;
+  /* width: 500px;
   height: 500px;
-  background-color: lightsalmon;
+  background-color: lightsalmon; */
   padding: 20px;
 }
 

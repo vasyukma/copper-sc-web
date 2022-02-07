@@ -1,12 +1,17 @@
-.Wrapper {
+.wrapper {
   display: flex;
   margin: 1px;
   background-color: beige;
 }
 
-.Tree {
+.tree {
   background-color: rgb(225, 232, 247);
 }
 
-.Data {
+.data {
+}
+
+.tails {
+  min-width: 300px;
+  height: 100%;
 }

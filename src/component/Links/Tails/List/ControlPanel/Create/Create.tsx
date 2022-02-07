@@ -9,14 +9,18 @@ interface IProps {}
 
 export const Create: FC<IProps> = ({}) => {
   const linksState = useSelector((state: RootState) => state.linksSlice);
+  const currentNode = useSelector(
+    (state: RootState) => state.nodeExplorerSlice.currentNode
+  );
   const [createTail, {}] = copperSkApi.usePostTailMutation();
 
   const handleCreate = () => {
     // // const linksState = useSelector((state: RootState) => state.linksSlice);
-    if (linksState.currentLink && linksState.selectedChildNode) {
+    // if (linksState.currentLink && linksState.selectedChildNode) {
+    if (linksState.currentLink && currentNode) {
       const newTail = {
         linkId: linksState.currentLink.id,
-        nodeId: linksState.selectedChildNode.id,
+        nodeId: currentNode.id,
         description: '',
       } as ITail;
       createTail(newTail);

@@ -11,4 +11,7 @@
   top: 25%;
   right: 25%;
   line-height: 1px;
+  width: 500px;
+  height: 500px;
+  background-color: lightsalmon;
 }

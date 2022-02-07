@@ -4,6 +4,7 @@ import Link from './Link/Link';
 import List from './List/List';
 import { Tails } from './Tails/Tails';
 import { NodesChildren } from './Tails/NodesChildren/NodesChildren';
+import Tree from '../NodeExplorer/Tree/Tree';
 
 export const Links = () => {
   return (
@@ -17,9 +18,9 @@ export const Links = () => {
       <div className={styles.item}>
         <Tails />
       </div>
-      {/* <div className={styles.item}>
-        <Nodes />
-      </div> */}
+      <div className={styles.item}>
+        <Tree />
+      </div>
     </div>
   );
 };

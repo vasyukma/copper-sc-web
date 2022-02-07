@@ -1,11 +1,11 @@
 import { FC, useEffect, useState } from 'react';
 import styles from './EditForm.module.css';
 import { useDispatch, useSelector } from 'react-redux';
-import { setIsEditNode } from '../../../store/reducer/nodeExplorerSlice';
-import { RootState } from '../../../store/store';
+import { setIsEditNode } from '../../../../../store/reducer/nodeExplorerSlice';
+import { RootState } from '../../../../../store/store';
 import { useForm } from 'react-hook-form';
-import { INode } from '../../../model/INode';
-import { copperSkApi } from '../../../service/CopperSkService';
+import { INode } from '../../../../../model/INode';
+import { copperSkApi } from '../../../../../service/CopperSkService';
 
 interface IProps {
   node: INode;
