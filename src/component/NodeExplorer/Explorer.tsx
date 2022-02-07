@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux";
 import { copperSkApi } from "../../service/CopperSkService";
 import { setCurrentNode } from "../../store/reducer/nodeExplorerSlice";
 import styles from "./Explorer.module.css";
+import ContainerLinks from "./Links/ContainerLinks";
 import Node from "./Node/Node";
 import Tree from "./Tree/Tree";
 
@@ -28,6 +29,9 @@ const Explorer = () => {
       </div>
       <div className={styles.Data}>
         <Node />
+      </div>
+      <div className={styles.item}>
+        <ContainerLinks />
       </div>
     </div>
   );

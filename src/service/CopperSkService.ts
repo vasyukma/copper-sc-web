@@ -25,6 +25,12 @@ export const copperSkApi = createApi({
       }),
       providesTags: (result) => ["Tails"],
     }),
+    fetchLinksByNodeId: build.query<ITail[], number>({
+      query: (nodeId) => ({
+        url: `/tails/${nodeId}`,
+      }),
+      providesTags: (result) => ["Tails"],
+    }),
     postTail: build.mutation<ITail, ITail>({
       query: (tail) => ({
         url: `/tails`,
