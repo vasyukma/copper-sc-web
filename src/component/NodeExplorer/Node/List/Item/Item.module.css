@@ -1,14 +1,18 @@
 .wrapper {
   display: flex;
+  /* flex-direction: column; */
   background-color: rgb(108, 255, 145);
   border-bottom: 1px solid grey;
+
+  justify-content: stretch;
 }
 
-.content {
+.item {
   border-right: 1px solid grey;
-  text-align: center;
-  padding: 5px 0px 0px 5px;
+  /* text-align: left; */
+  /* padding: 5px 0px 0px 5px; */
   height: 100%;
+  /* background-color: brown; */
 }
 
 .selected {

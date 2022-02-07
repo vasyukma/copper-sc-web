@@ -1,6 +1,8 @@
-.Wrapper {
+.wrapper {
   display: flex;
+  flex-direction: column;
   background-color: gold;
+  width: 300px;
 }
-.Content {
+.item {
 }

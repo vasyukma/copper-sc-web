@@ -1,13 +1,10 @@
-import styles from './Item.module.css';
-import parentStyles from '../../Node.module.css';
-import { INode } from '../../../../../model/INode';
-import { FC, useState, useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { RootState } from '../../../../../store/store';
-import {
-  setIsEditNode,
-  setSelectedNode,
-} from '../../../../../store/reducer/nodeExplorerSlice';
+import { FC, useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { INode } from "../../../../../model/INode";
+import { setSelectedNode } from "../../../../../store/reducer/nodeExplorerSlice";
+import { RootState } from "../../../../../store/store";
+// import parentStyles from "../../Node.module.css";
+import styles from "./Item.module.css";
 
 interface IProps {
   node: INode;
@@ -15,15 +12,14 @@ interface IProps {
 
 const Item: FC<IProps> = ({ node }) => {
   const dispatch = useDispatch();
-  let [stylesWrapper, setStylesWrapper] = useState(styles.wrapper);
-  let selectedNode = useSelector(
+  const [stylesWrapper, setStylesWrapper] = useState(styles.wrapper);
+  const selectedNode = useSelector(
     (state: RootState) => state.nodeExplorerSlice.selectedNode
   );
   useEffect(() => {
     node.id === selectedNode?.id
       ? setStylesWrapper(`${styles.wrapper} ${styles.selected}`)
       : setStylesWrapper(styles.wrapper);
-    // stylesWrapper =
   });
 
   return (
@@ -31,27 +27,30 @@ const Item: FC<IProps> = ({ node }) => {
       className={stylesWrapper}
       onClick={() => dispatch(setSelectedNode(node))}
     >
-      <div className={parentStyles.idColumn_size}>
-        <div className={styles.content}>{node.id}</div>
-      </div>
-      <div className={parentStyles.shortNameColumn_size}>
-        <div className={styles.content}>{node.shortName}</div>
-      </div>
-      <div className={parentStyles.longNameColumn_size}>
+      {/* <div className={parentStyles.idColumn_size}> */}
+      <div className={`${styles.item}`}>{node.id}</div>
+      {/* </div> */}
+      {/* <div className={parentStyles.shortNameColumn_size}> */}
+      <div className={styles.item}>{node.type.shortName}</div>
+      {/* </div> */}
+
+      {/* <div className={parentStyles.shortNameColumn_size}> */}
+      <div className={styles.item}>{node.shortName}</div>
+      {/* </div> */}
+      {
+        /* <div className={parentStyles.longNameColumn_size}>
         <div className={styles.content}>{node.longName}</div>
-      </div>
-      <div className={parentStyles.descriptionColumn_size}>
-        <div className={styles.content}>{node.description}</div>
-      </div>
-      <div className={parentStyles.shortNameColumn_size}>
-        <div className={styles.content}>{node.type.shortName}</div>
-      </div>
-      <div className={parentStyles.longNameColumn_size}>
+      </div>*/
+        // <div className={parentStyles.descriptionColumn_size}>
+        <div className={styles.item}>{node.description}</div>
+        // </div>
+      }
+      {/* <div className={parentStyles.longNameColumn_size}>
         <div className={styles.content}>{node.type.longName}</div>
       </div>
       <div className={parentStyles.descriptionColumn_size}>
         <div className={styles.content}>{node.type.description}</div>
-      </div>
+      </div> */}
     </div>
   );
 };

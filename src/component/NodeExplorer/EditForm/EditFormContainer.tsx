@@ -1,8 +1,8 @@
-import { FC } from 'react';
-import { useSelector } from 'react-redux';
-import { RootState } from '../../../store/store';
-import styles from './Conteiner.module.css';
-import EditFrom from './EditForm';
+import { FC } from "react";
+import { useSelector } from "react-redux";
+import { RootState } from "../../../store/store";
+import styles from "./Conteiner.module.css";
+import EditFrom from "./EditForm";
 
 interface IProps {}
 export const EditFormContainer: FC<IProps> = ({}) => {

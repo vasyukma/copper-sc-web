@@ -1,26 +1,19 @@
-import { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { copperSkApi } from '../../service/CopperSkService';
-import { setCurrentNode } from '../../store/reducer/nodeExplorerSlice';
-import { RootState } from '../../store/store';
-import EditFormContainer from './EditForm/EditFormContainer';
-import { EditFrom } from './EditForm/EditForm';
-import styles from './Explorer.module.css';
-import Node from './Node/Node';
-import Tree from './Tree/Tree';
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { copperSkApi } from "../../service/CopperSkService";
+import { setCurrentNode } from "../../store/reducer/nodeExplorerSlice";
+import styles from "./Explorer.module.css";
+import Node from "./Node/Node";
+import Tree from "./Tree/Tree";
 
 const Explorer = () => {
-  // const isEditNode = useSelector(
-  //   (state: RootState) => state.nodeExplorerSlice.isEditNode
-  // );
-
   const dispatch = useDispatch();
 
   const {
     data: rootNode,
     error: fetchRootError,
     isLoading: fetchRootIsLoading,
-  } = copperSkApi.useFetchRootNodeQuery('');
+  } = copperSkApi.useFetchRootNodeQuery("");
 
   useEffect(() => {
     dispatch(setCurrentNode(rootNode));
@@ -36,11 +29,6 @@ const Explorer = () => {
       <div className={styles.Data}>
         <Node />
       </div>
-      {/* {isEditNode && (
-        <div className={styles.editForm}>
-          <Conteiner />
-        </div>
-      )} */}
     </div>
   );
 };

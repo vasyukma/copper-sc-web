@@ -1,9 +1,9 @@
-import { FC } from 'react';
-import styles from './ControlPanel.module.css';
-import { useDispatch, useSelector } from 'react-redux';
-import { setIsEditNode } from '../../../../store/reducer/nodeExplorerSlice';
-import { RootState } from '../../../../store/store';
-import EditFormContainer from '../../EditForm/EditFormContainer';
+import { FC } from "react";
+import styles from "./ControlPanel.module.css";
+import { useDispatch, useSelector } from "react-redux";
+import { setIsEditNode } from "../../../../store/reducer/nodeExplorerSlice";
+import { RootState } from "../../../../store/store";
+import EditFormContainer from "../../EditForm/EditFormContainer";
 
 interface IProps {}
 export const ControlPanel: FC<IProps> = ({}) => {
