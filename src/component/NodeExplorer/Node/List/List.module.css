@@ -2,7 +2,11 @@
   display: flex;
   flex-direction: column;
   background-color: gold;
-  width: 300px;
+  min-width: 300px;
+  width: 100%;
+
 }
 .item {
 }
+
+
