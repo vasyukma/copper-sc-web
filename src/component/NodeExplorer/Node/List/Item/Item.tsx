@@ -27,30 +27,10 @@ const Item: FC<IProps> = ({ node }) => {
       className={stylesWrapper}
       onClick={() => dispatch(setSelectedNode(node))}
     >
-      {/* <div className={parentStyles.idColumn_size}> */}
-      <div className={`${styles.item}`}>{node.id}</div>
-      {/* </div> */}
-      {/* <div className={parentStyles.shortNameColumn_size}> */}
-      <div className={styles.item}>{node.type.shortName}</div>
-      {/* </div> */}
-
-      {/* <div className={parentStyles.shortNameColumn_size}> */}
-      <div className={styles.item}>{node.shortName}</div>
-      {/* </div> */}
-      {
-        /* <div className={parentStyles.longNameColumn_size}>
-        <div className={styles.content}>{node.longName}</div>
-      </div>*/
-        // <div className={parentStyles.descriptionColumn_size}>
-        <div className={styles.item}>{node.description}</div>
-        // </div>
-      }
-      {/* <div className={parentStyles.longNameColumn_size}>
-        <div className={styles.content}>{node.type.longName}</div>
-      </div>
-      <div className={parentStyles.descriptionColumn_size}>
-        <div className={styles.content}>{node.type.description}</div>
-      </div> */}
+      <div className={`${styles.item} ${styles.item1}`}>{node.id}</div>
+      <div className={`${styles.item} ${styles.item2}`}>{node.type.shortName}</div>
+      <div className={`${styles.item} ${styles.item2}`}>{node.shortName}</div>
+      <div className={`${styles.item} ${styles.item3}`}>{node.description}</div>
     </div>
   );
 };

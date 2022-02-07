@@ -1,18 +1,29 @@
 .wrapper {
   display: flex;
-  /* flex-direction: column; */
   background-color: rgb(108, 255, 145);
-  border-bottom: 1px solid grey;
-
-  justify-content: stretch;
+  border: 1px solid grey;
+  border-radius: 5px;
 }
 
 .item {
   border-right: 1px solid grey;
-  /* text-align: left; */
-  /* padding: 5px 0px 0px 5px; */
-  height: 100%;
-  /* background-color: brown; */
+  overflow: hidden;
+  padding: 2px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.item1 {
+  width: 40px;
+}
+
+.item2 {
+  width: 45px;
+}
+
+.item3 {
+  min-width: 150px;
+  width: 100%;
 }
 
 .selected {
@@ -21,3 +32,4 @@
 .wrapper:hover {
   background-color: rgb(219, 245, 74);
 }
+
