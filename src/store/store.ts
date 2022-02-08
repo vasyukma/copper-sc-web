@@ -1,8 +1,8 @@
-import { combineReducers, configureStore } from '@reduxjs/toolkit';
-import { copperSkApi } from '../service/CopperSkService';
-import nodeExplorerSlice from './reducer/nodeExplorerSlice';
-import nodeTypeReducer from './reducer/NodeTypeSlice';
-import linksSlice from './reducer/linksSlice';
+import { combineReducers, configureStore } from "@reduxjs/toolkit";
+import { copperSkApi } from "../service/CopperSkService";
+import nodeExplorerSlice from "./reducer/nodeExplorerSlice";
+import nodeTypeReducer from "./reducer/NodeTypeSlice";
+import linksSlice from "./reducer/linksSlice";
 
 const rootReducer = combineReducers({
   linksSlice,
@@ -25,4 +25,4 @@ export const setupStore = () => {
 
 export type RootState = ReturnType<typeof rootReducer>;
 export type AppStore = ReturnType<typeof setupStore>;
-export type AppDispatch = AppStore['dispatch'];
+export type AppDispatch = AppStore["dispatch"];

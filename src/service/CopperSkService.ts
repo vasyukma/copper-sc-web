@@ -9,10 +9,6 @@ export const copperSkApi = createApi({
   reducerPath: "copperSkApi",
   baseQuery: fetchBaseQuery({
     // baseUrl: "http://localhost:8080/api/v0",
-<<<<<<< HEAD
-=======
-    // baseUrl: "http://192.168.30.149:18090/api/v0",
->>>>>>> css_label
     baseUrl: "http://192.168.30.149:18090/api/v0",
   }),
   tagTypes: ["Links", "Tails", "Nodes", "NodeTypes"],
@@ -41,6 +37,14 @@ export const copperSkApi = createApi({
       query: (link) => ({
         url: `/links`,
         method: "PUT",
+        body: link,
+      }),
+      invalidatesTags: ["Links"],
+    }),
+    postLink: build.mutation<ILink, ILink>({
+      query: (link) => ({
+        url: `/links`,
+        method: "POST",
         body: link,
       }),
       invalidatesTags: ["Links"],
