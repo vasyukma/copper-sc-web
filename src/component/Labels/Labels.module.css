@@ -3,7 +3,10 @@
   flex: 100;
   height: 100%;
   margin: 5px;
-  max-width: 190mm;
+  max-width: 100mm;
+  background-color: white;
+  font-size: 13px;
+  
 }
 
 .title {
@@ -15,17 +18,28 @@
 .block__row {
   display: flex;
   flex-wrap: wrap;
+   
 }
 
+
 .block__column {
-  border: 1px solid #5e5373;
-  height: 8.5mm;
-  width: 16.5mm;
+  border-right: 1px solid #5e5373;
+  border-bottom: 1px solid #5e5373;
+  height: 7mm;
+  width: 14.5mm;
+}
+.block__column:nth-child(54){
+  margin-bottom: 45px;
+}
+
+.block__column:nth-child(72n+54){
+  margin-bottom: 45px;
 }
 
 .block__item {
   font-size: auto;
   text-align: center;
-  line-height: 8.5mm;
-  font-weight: 700;
+  line-height: 7mm;
+  font-weight: 500;
+
 }
