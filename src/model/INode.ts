@@ -1,7 +1,7 @@
-import { INodeType } from './INodeType';
+import { INodeType } from "./INodeType";
 
 export interface INode {
-  id: number;
+  id: number | null;
   shortName: string;
   longName: string;
   description: string;

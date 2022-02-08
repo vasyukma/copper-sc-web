@@ -1,8 +1,8 @@
-import { FC } from 'react';
-import { useSelector } from 'react-redux';
-import { RootState } from '../../../../../store/store';
-import styles from './Conteiner.module.css';
-import EditFrom from './EditForm';
+import { FC } from "react";
+import { useSelector } from "react-redux";
+import { RootState } from "../../../../../store/store";
+import styles from "./Conteiner.module.css";
+import EditFrom from "./EditForm";
 
 interface IProps {}
 export const EditNodeContainer: FC<IProps> = ({}) => {
@@ -12,7 +12,7 @@ export const EditNodeContainer: FC<IProps> = ({}) => {
 
   return (
     <div className={styles.wrapper}>
-      {currentNode && <EditFrom node={currentNode} />}
+      {currentNode && <EditFrom node={currentNode} title="Редактирование" />}
     </div>
   );
 };

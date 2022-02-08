@@ -14,11 +14,11 @@
 }
 
 .item1 {
-  width: 40px;
+  width: 100px;
 }
 
 .item2 {
-  width: 45px;
+  width: 200px;
 }
 
 .item3 {
@@ -32,4 +32,3 @@
 .wrapper:hover {
   background-color: rgb(219, 245, 74);
 }
-

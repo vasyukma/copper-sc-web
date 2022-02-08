@@ -1,25 +1,38 @@
-import { FC, useEffect, useState } from 'react';
-import styles from './EditForm.module.css';
-import { useDispatch, useSelector } from 'react-redux';
-import { setIsEditNode } from '../../../../../store/reducer/nodeExplorerSlice';
-import { RootState } from '../../../../../store/store';
-import { useForm } from 'react-hook-form';
-import { INode } from '../../../../../model/INode';
-import { copperSkApi } from '../../../../../service/CopperSkService';
+import { FC, useEffect, useState } from "react";
+import { useForm } from "react-hook-form";
+import { useDispatch, useSelector } from "react-redux";
+import { INode } from "../../../../../model/INode";
+import { copperSkApi } from "../../../../../service/CopperSkService";
+import { offCreateEditNode } from "../../../../../store/reducer/nodeExplorerSlice";
+import { RootState } from "../../../../../store/store";
+import styles from "./EditForm.module.css";
 
 interface IProps {
   node: INode;
+  title: string;
 }
-export const EditFrom: FC<IProps> = ({ node }) => {
+export const EditFrom: FC<IProps> = ({ node, title }) => {
   const dispatch = useDispatch();
 
-  const [createPost, {}] = copperSkApi.usePutNodeMutation();
-  const { data: nodeTypes } = copperSkApi.useFetchAllNodeTypesQuery('');
+  const isCreateNode = useSelector(
+    (state: RootState) => state.nodeExplorerSlice.isCreateNode
+  );
+  const isEditNode = useSelector(
+    (state: RootState) => state.nodeExplorerSlice.isEditNode
+  );
+
+  const [postNode, {}] = copperSkApi.usePostNodeMutation();
+  const [putNode, {}] = copperSkApi.usePutNodeMutation();
+  const { data: nodeTypes } = copperSkApi.useFetchAllNodeTypesQuery("");
 
   const [nodeTypeId, setNodeTypeId] = useState(node.type.id);
   const handleChangeNodeType = (event: any) => {
     setNodeTypeId(event.target.value);
   };
+  if (isEditNode && isCreateNode) {
+    alert("Влючен режим созадния и редактирования одновременно!!!");
+    dispatch(offCreateEditNode());
+  }
 
   const {
     register,
@@ -29,22 +42,36 @@ export const EditFrom: FC<IProps> = ({ node }) => {
   } = useForm<INode>();
 
   const onSubmit = handleSubmit((data) => {
-    // console.log({ ...data });
-    createPost({
-      ...data,
-      id: node.id,
-      parentId: node.parentId,
-      typeId: nodeTypeId,
-    } as INode);
-    dispatch(setIsEditNode(false));
+    if (isCreateNode) {
+      postNode({
+        ...data,
+        id: null,
+        parentId: node.id,
+        typeId: nodeTypeId,
+      } as INode);
+      dispatch(offCreateEditNode());
+    }
+    if (isEditNode) {
+      putNode({
+        ...data,
+        id: node.id,
+        parentId: node.parentId,
+        typeId: nodeTypeId,
+      } as INode);
+      dispatch(offCreateEditNode());
+    }
   });
   useEffect(() => {
-    setValue('shortName', node.shortName);
-    setValue('longName', node.longName);
-    setValue('description', node.description);
-    // setValue('type', node.id);
-    // setValue('parentId', node.parentId);
-  });
+    if (isEditNode) {
+      setValue("shortName", node.shortName);
+      setValue("longName", node.longName);
+      setValue("description", node.description);
+      // setValue('type', node.id);
+      // setValue('parentId', node.parentId);
+      // dispatch()
+      // isEditNode && isCreateNode && dispatch(offCreateEditNode());
+    }
+  }, []);
 
   // useEffect(() => {
   //   setNodeTypeId(node.type.id);
@@ -52,21 +79,22 @@ export const EditFrom: FC<IProps> = ({ node }) => {
 
   return (
     <div className={styles.wrapper}>
+      <div className={styles.title}>{title}</div>
       <div className={styles.item}>
         {/* Node: {currentNode?.shortName} */}
-        <button onClick={() => dispatch(setIsEditNode(false))}>Close</button>
+        <button onClick={() => dispatch(offCreateEditNode())}>Close</button>
         <form className={styles.form} onSubmit={onSubmit}>
           <div className={styles.element}>
             <label className={styles.label}>Короткое имя: </label>
-            <input className={styles.input} {...register('shortName')} />
+            <input className={styles.input} {...register("shortName")} />
           </div>
           <div className={styles.element}>
             <label className={styles.label}>Длинное имя: </label>
-            <input className={styles.input} {...register('longName')} />
+            <input className={styles.input} {...register("longName")} />
           </div>
           <div className={styles.element}>
             <label className={styles.label}>Описание: </label>
-            <input className={styles.input} {...register('description')} />
+            <input className={styles.input} {...register("description")} />
           </div>
           <div className={styles.element}>
             <label className={styles.label}>Тип: </label>
