@@ -8,11 +8,14 @@ interface IProps {
 const PathPanel: FC<IProps> = ({ links }) => {
   return (
     <div className={styles.wrapper}>
-      <div className={styles.title}>Для патч-панели </div>
-      {links.map((item) => {
-        return <div className={styles.block__item}> {item.name} </div>;
-      })}
+      <div className={styles.item}>
+        <div className={styles.title}>Для патч-панели </div>
+        {links.map((item) => {
+          return <div className={styles.block__item}> {item.name} </div>;
+        })}
+      </div>
     </div>
   );
 };
+
 export default PathPanel;

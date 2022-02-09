@@ -68,7 +68,7 @@ export const Labels = () => {
   return (
     <div className={styles.wrapper}>
       {/* {/* <div className={styles.controlPanel}>ControlPanel</div> */}
-      <div className={styles.block}>
+      {/* <div className={styles.block}> */}
         <div className={styles.title}></div>
         <div className={styles.title__text}>
           <h1>Этикирование</h1>
@@ -102,7 +102,7 @@ export const Labels = () => {
           {/* </div> */}
           {/* sdf */}
         </div>
-      </div>
+      {/* </div> */}
     </div>
   );
 };

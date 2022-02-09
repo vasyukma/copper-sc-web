@@ -1,7 +1,10 @@
 .wrapper {
   display: flex;
   margin: 1px;
+  min-width: 1920px;
   background-color: beige;
+  border: 1px solid grey;
+  border-radius: 5px;
 }
 
 .tree {

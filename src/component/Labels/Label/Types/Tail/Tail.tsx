@@ -9,10 +9,12 @@ interface LinkItemProps {
 const Tail: FC<LinkItemProps> = ({ links }) => {
   return (
     <div className={styles.wrapper}>
-      <div className={styles.title}>Для конца линии </div>
-      {links.map((item) => {
-        return <div className={styles.block__item}> {item.name} </div>;
-      })}
+      <div className={styles.item}>
+        <div className={styles.title}>Для конца линии </div>
+        {links.map((item) => {
+          return <div className={styles.block__item}> {item.name} </div>;
+        })}
+        </div>
     </div>
   );
 };

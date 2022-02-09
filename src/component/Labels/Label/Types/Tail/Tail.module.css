@@ -1,9 +1,39 @@
 
 .item {
-  display: flex;
+  background-color: white;
+  font-size: 20px;
 }
 
-.item_element {
-  color: blueviolet;
-  padding: 0px 10px;
+.title{
+  display: block;
+  width: 100mm;
+  border-bottom: 1px solid black;
+  page-break-after: always;
+  
+}
+
+.block__item {
+  display: inline-block;
+  height: 30mm;
+  width: 20mm;
+  text-align: center;
+  line-height: 7mm;
+  font-weight: 500;
+  border: 1px solid black;
+}
+
+.block__item:nth-child(12n+13){
+  transform: rotate(180deg);
+}
+.block__item:nth-child(12n+12){
+  transform: rotate(180deg);
+}
+
+.block__item:nth-child(12n+11){
+  transform: rotate(180deg);
+}
+
+.block__item:nth-child(12n+10){
+  page-break-after: always;
+  transform: rotate(180deg);
 }

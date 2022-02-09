@@ -29,6 +29,8 @@
 .selected {
   background-color: rgb(255, 137, 137);
 }
+
 .wrapper:hover {
   background-color: rgb(219, 245, 74);
 }
+
