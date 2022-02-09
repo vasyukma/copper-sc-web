@@ -1,5 +1,5 @@
 export interface ILink {
-  id: number;
+  id: number | null;
   name: string;
   cableBrand: string;
   cabinetLength: number;
