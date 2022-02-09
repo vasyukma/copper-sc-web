@@ -1,6 +1,6 @@
 import { FC } from 'react';
-import { INodeType } from '../../../model/INodeType';
-import './NodeType.css'
+import { INodeType } from '../../../model/NodeType';
+import './NodeType.css';
 
 interface NodeTypeItemProps {
   item: INodeType;

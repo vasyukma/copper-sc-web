@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { INode } from '../../../../model/INode';
+import { INode } from '../../../../model/Node';
 import { copperSkApi } from '../../../../service/CopperSkService';
 import Info from './Info';
 

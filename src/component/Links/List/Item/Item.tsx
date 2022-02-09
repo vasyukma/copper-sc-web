@@ -1,5 +1,5 @@
 import { FC, useEffect, useState } from 'react';
-import { ILink } from '../../../../model/ILink';
+import { ILink } from '../../../../model/Link';
 import styles from './Item.module.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../../../../store/store';

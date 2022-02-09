@@ -1,5 +1,5 @@
 import React from 'react';
-import { INode } from '../../../../../../../model/INode';
+import { INode } from '../../../../../../../model/Node';
 import styles from './Item.module.css';
 
 interface IProps {

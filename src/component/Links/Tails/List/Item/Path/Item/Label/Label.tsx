@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import styles from './Label.module.css';
-import { INode } from '../../../../../../../../model/INode';
+import { INode } from '../../../../../../../../model/Node';
 
 interface IProps {
   node: INode;

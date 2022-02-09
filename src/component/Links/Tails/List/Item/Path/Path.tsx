@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { ITail } from '../../../../../../model/ITail';
+import { ITail } from '../../../../../../model/Tail';
 import { copperSkApi } from '../../../../../../service/CopperSkService';
 import { Item } from './Item/Item';
 import styles from './Path.module.css';

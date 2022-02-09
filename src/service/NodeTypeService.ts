@@ -1,5 +1,5 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
-import { INodeType } from '../model/INodeType';
+import { INodeType } from '../model/NodeType';
 
 export const nodeTypeApi = createApi({
   reducerPath: 'nodeTypeApi',

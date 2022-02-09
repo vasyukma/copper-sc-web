@@ -1,6 +1,6 @@
-import { FC } from "react";
-import { INode } from "../../../model/INode";
-import { copperSkApi } from "../../../service/CopperSkService";
+import { FC } from 'react';
+import { INode } from '../../../model/Node';
+import { copperSkApi } from '../../../service/CopperSkService';
 
 export function getNode(node: INode) {
   return <Node node={node} />;

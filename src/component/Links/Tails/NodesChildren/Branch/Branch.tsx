@@ -1,8 +1,8 @@
 import { FC } from 'react';
 import styles from './Branch.module.css';
 import Node from './Node/Node';
-import { INode } from '../../../../../model/INode';
-import { INodePath } from '../../../../../model/INodePath';
+import { INode } from '../../../../../model/Node';
+import { INodePath } from '../../../../../model/NodePath';
 import { copperSkApi } from '../../../../../service/CopperSkService';
 
 interface IProps {

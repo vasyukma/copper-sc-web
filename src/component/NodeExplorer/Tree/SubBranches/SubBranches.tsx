@@ -1,5 +1,5 @@
 import { FC, useState } from 'react';
-import { INode } from '../../../../model/INode';
+import { INode } from '../../../../model/Node';
 import { copperSkApi } from '../../../../service/CopperSkService';
 import Branch from '../Branch/Branch';
 import styles from './SubBranches.module.css';

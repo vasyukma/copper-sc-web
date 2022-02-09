@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { INode } from '../../../model/INode';
+import { INode } from '../../../model/Node';
 import Branch from './Branch/Branch';
 import styles from './Tree.module.css';
 import { copperSkApi } from '../../../service/CopperSkService';

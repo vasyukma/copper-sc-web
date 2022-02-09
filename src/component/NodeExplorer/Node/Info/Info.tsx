@@ -1,7 +1,7 @@
-import { FC } from "react";
-import { INode } from "../../../../model/INode";
-import styles from "./Info.module.css";
-import Item from "./Item/Item";
+import { FC } from 'react';
+import { INode } from '../../../../model/Node';
+import styles from './Info.module.css';
+import Item from './Item/Item';
 
 interface IProps {
   node: INode;

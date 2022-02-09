@@ -3,7 +3,7 @@ import styles from './Form.module.css';
 import { Content } from './Content/Content';
 import { RootState } from '../../../store/store';
 import { useSelector } from 'react-redux';
-import { ILink } from '../../../model/ILink';
+import { ILink } from '../../../model/Link';
 import EditFrom from '../EditForm/EditForm';
 
 interface IProps {}

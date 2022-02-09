@@ -45,3 +45,7 @@
   width: 200px;
   background-color: coral;
 }
+
+.control_elements {
+  display: flex;
+}

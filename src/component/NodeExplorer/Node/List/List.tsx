@@ -1,8 +1,8 @@
-import styles from "./List.module.css";
-import { INode } from "../../../../model/INode";
-import { FC } from "react";
-import { copperSkApi } from "../../../../service/CopperSkService";
-import Item from "./Item/Item";
+import styles from './List.module.css';
+import { INode } from '../../../../model/Node';
+import { FC } from 'react';
+import { copperSkApi } from '../../../../service/CopperSkService';
+import Item from './Item/Item';
 
 interface IProps {
   parentNode: INode;

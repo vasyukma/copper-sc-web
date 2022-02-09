@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { ILink } from '../../../../model/ILink';
+import { ILink } from '../../../../model/Link';
 import { copperSkApi } from '../../../../service/CopperSkService';
 import ControlPanel from './ControlPanel/ControlPanel';
 import { Item } from './Item/Item';

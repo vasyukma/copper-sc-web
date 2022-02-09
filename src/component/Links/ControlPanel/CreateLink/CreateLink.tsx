@@ -1,11 +1,11 @@
-import styles from "./CreateLink.module.css";
-import { FC, useEffect } from "react";
-import { useAppDispatch, useAppSelector } from "../../../../hook/redux";
-import { RootState } from "../../../../store/store";
-import { copperSkApi } from "../../../../service/CopperSkService";
-import { offCreateEditLink } from "../../../../store/reducer/linksSlice";
-import { useForm } from "react-hook-form";
-import { ILink } from "../../../../model/ILink";
+import { FC, useEffect } from 'react';
+import { useForm } from 'react-hook-form';
+import { useAppDispatch, useAppSelector } from '../../../../hook/redux';
+import { ILink, ILinkForCreateAndUpdate } from '../../../../model/Link';
+import { copperSkApi } from '../../../../service/CopperSkService';
+import { offCreateEditLink } from '../../../../store/reducer/linksSlice';
+import { RootState } from '../../../../store/store';
+import styles from './CreateLink.module.css';
 interface ICreateLink {}
 
 const CreateLink: FC<ICreateLink> = () => {
@@ -22,7 +22,7 @@ const CreateLink: FC<ICreateLink> = () => {
   const [createLink, {}] = copperSkApi.usePostLinkMutation();
 
   if (isEditNode && isCreateNode) {
-    alert("Влючен режим созадния и редактирования одновременно!!!");
+    alert('Влючен режим созадния и редактирования одновременно!!!');
     dispatch(offCreateEditLink());
   }
 
@@ -38,19 +38,19 @@ const CreateLink: FC<ICreateLink> = () => {
       ...data,
       id: null,
       //   name:
-    } as ILink);
+    } as ILinkForCreateAndUpdate);
   });
   useEffect(() => {
     // setValue('id', link.id);
-    setValue("name", "");
-    setValue("cableBrand", "");
-    setValue("cabinetLength", 0);
-    setValue("metalStructursLength", 0);
-    setValue("cableChannelLength", 0);
-    setValue("reserveLength", 0);
-    setValue("parts", 0);
-    setValue("length", 0);
-    setValue("description", "");
+    setValue('name', '');
+    setValue('cableBrand', '');
+    setValue('cabinetLength', 0);
+    setValue('metalStructursLength', 0);
+    setValue('cableChannelLength', 0);
+    setValue('reserveLength', 0);
+    setValue('parts', 0);
+    setValue('length', 0);
+    setValue('description', '');
   }, []);
 
   return (
@@ -58,7 +58,7 @@ const CreateLink: FC<ICreateLink> = () => {
       <form className={styles.form} onSubmit={onSubmit}>
         <div>
           <label>Имя: </label>
-          <input {...register("name")} />
+          <input {...register('name')} />
         </div>
         {/* <div>
         <label>Марка кабеля: </label>

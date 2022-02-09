@@ -1,5 +1,5 @@
 import { FC, useReducer, useState, useEffect } from 'react';
-import { ILink } from '../../../../model/ILink';
+import { ILink } from '../../../../model/Link';
 import styles from './Content.module.css';
 
 interface IProps {

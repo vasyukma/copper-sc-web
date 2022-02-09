@@ -1,5 +1,5 @@
-import { createSlice } from "@reduxjs/toolkit";
-import { INode } from "../../model/INode";
+import { createSlice } from '@reduxjs/toolkit';
+import { INode } from '../../model/Node';
 
 interface IInitialState {
   currentNode: INode | undefined;
@@ -16,7 +16,7 @@ const initialState: IInitialState = {
 };
 
 const nodeExplorerSlice = createSlice({
-  name: "nodeTree",
+  name: 'nodeTree',
   initialState: initialState,
   reducers: {
     setCurrentNode(state, action) {

@@ -2,7 +2,7 @@ import { FC } from 'react';
 import styles from './Create.module.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../../../../../../store/store';
-import { ITail } from '../../../../../../model/ITail';
+import { ITail } from '../../../../../../model/Tail';
 import { copperSkApi } from '../../../../../../service/CopperSkService';
 
 interface IProps {}

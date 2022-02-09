@@ -1,6 +1,6 @@
-import { FC } from "react";
-import { ILink } from "../../../../../model/ILink";
-import styles from "./Tail.module.css";
+import { FC } from 'react';
+import { ILink } from '../../../../../model/Link';
+import styles from './Tail.module.css';
 
 interface LinkItemProps {
   links: ILink[];

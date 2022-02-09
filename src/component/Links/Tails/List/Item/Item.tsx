@@ -1,6 +1,6 @@
 import { FC, useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { ITail } from '../../../../../model/ITail';
+import { ITail } from '../../../../../model/Tail';
 import { copperSkApi } from '../../../../../service/CopperSkService';
 import { setCurrentTail } from '../../../../../store/reducer/linksSlice';
 import { RootState } from '../../../../../store/store';

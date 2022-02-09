@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import styles from './RightTail.module.css';
-import { ITail } from '../../../../../model/ITail';
+import { ITail } from '../../../../../model/Tail';
 import { copperSkApi } from '../../../../../service/CopperSkService';
 
 interface IProps {

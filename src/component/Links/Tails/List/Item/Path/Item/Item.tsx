@@ -1,6 +1,6 @@
 import { FC, useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { INode } from '../../../../../../../model/INode';
+import { INode } from '../../../../../../../model/Node';
 import { copperSkApi } from '../../../../../../../service/CopperSkService';
 import { setSelectedPathNode } from '../../../../../../../store/reducer/linksSlice';
 import { RootState } from '../../../../../../../store/store';

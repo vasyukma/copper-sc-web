@@ -1,7 +1,7 @@
-import { createSlice } from "@reduxjs/toolkit";
-import { ILink } from "../../model/ILink";
-import { INode } from "../../model/INode";
-import { ITail } from "../../model/ITail";
+import { createSlice } from '@reduxjs/toolkit';
+import { ILink } from '../../model/Link';
+import { INode } from '../../model/Node';
+import { ITail } from '../../model/Tail';
 
 interface IInitialState {
   currentLink: ILink | undefined;
@@ -24,7 +24,7 @@ const initialState: IInitialState = {
 };
 
 export const linksSlice = createSlice({
-  name: "links",
+  name: 'links',
   initialState,
   reducers: {
     setCurrentLink(state, action) {

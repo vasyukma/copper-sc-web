@@ -1,6 +1,6 @@
-import styles from "./PatchPanel.module.css";
-import { FC } from "react";
-import { ILink } from "../../../../../model/ILink";
+import styles from './PatchPanel.module.css';
+import { FC } from 'react';
+import { ILink } from '../../../../../model/Link';
 interface IProps {
   links: ILink[];
 }
