@@ -2,9 +2,12 @@
   display: flex;
   margin: 1px;
   padding: 3px;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.418);
+  border: 1px solid grey;
+  border-radius: 5px;
 }
 
 .wrapper_active {
   background-color: rgb(255, 201, 201);
 }
+

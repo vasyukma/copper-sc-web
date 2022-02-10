@@ -5,47 +5,7 @@
   height: 100%;
   margin: 5px;
   max-width: 100mm;
-  background-color: white;
+  /* background-color: white; */
+  background-color: lightgreen;
   font-size: 13px;
-}
-
-.title {
-}
-
-.title__text {
-}
-
-.block__row {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.block__column {
-  border-right: 1px solid #5e5373;
-  border-bottom: 1px solid #5e5373;
-  height: 7mm;
-  width: 14.5mm;
-}
-.block__column:nth-child(54) {
-  margin-bottom: 45px;
-}
-
-.block__column:nth-child(72n + 54) {
-  margin-bottom: 45px;
-}
-
-.block__item {
-  font-size: auto;
-  text-align: center;
-  line-height: 7mm;
-  font-weight: 500;
-}
-
-.controlPanel {
-  width: 200px;
-  background-color: coral;
-}
-
-.control_elements {
-  display: flex;
 }

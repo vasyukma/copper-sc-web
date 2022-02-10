@@ -1,0 +1,26 @@
+
+.item {
+    background-color: white;
+  }
+  
+  .title{
+    display: block;
+    width: 100mm;
+    border-bottom: 1px solid black;
+    page-break-after: always;
+  }
+  
+  .block__item {
+    display: inline-block;
+    height: 7mm;
+    width: 14.5mm;
+    text-align: center;
+    line-height: 7mm;
+    font-weight: 500;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+  }
+  
+  .block__item:nth-child(30){
+    page-break-after: always;
+  }
