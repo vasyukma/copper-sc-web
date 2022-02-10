@@ -2,13 +2,14 @@
   display: flex;
   /* justify-content: center; */
   flex-direction: column;
-  height: calc(100% - 30px);
+  height: calc(100% - 56px);
   background-color: goldenrod;
   margin: 1px;
 }
 
 .content {
   display: flex;
+  height: calc(100% - 55px);
 }
 .control_panel {
   display: flex;
@@ -19,4 +20,5 @@
 
 .item {
   margin: 1px;
+  min-width: 180px;
 }
