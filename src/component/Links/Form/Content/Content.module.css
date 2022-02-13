@@ -1,0 +1,29 @@
+.element {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  cursor: default;
+  display: flex;
+}
+
+.row:nth-child(odd) {
+  background-color: lightgreen;
+}
+
+.caption {
+  flex: 1 0;
+  /* min-width: 200px; */
+  /* max-width: 200px; */
+  border-bottom: 1px dotted grey;
+  border-right: 1px dotted grey;
+}
+
+.data {
+  flex: 1 0;
+  padding: 0px 0px 0px 5px;
+  border-bottom: 1px dotted grey;
+  align-self: flex-end;
+  /* max-width: 200px; */
+}

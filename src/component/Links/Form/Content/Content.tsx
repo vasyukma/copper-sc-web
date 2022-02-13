@@ -1,5 +1,6 @@
-import { FC, useReducer, useState, useEffect } from 'react';
+import { FC } from 'react';
 import { ILink } from '../../../../model/Link';
+import blockStyles from '../Form.module.css';
 import styles from './Content.module.css';
 
 interface IProps {
@@ -8,38 +9,38 @@ interface IProps {
 
 export const Content: FC<IProps> = ({ link }) => {
   return (
-    <div className={styles.wrapper}>
-      <div className={styles.content}>
-        <span>Имя: </span>
-        <span>{link.name}</span>
+    <div className={styles.element}>
+      <div className={styles.row}>
+        <div className={styles.caption}>Имя: </div>
+        <div className={styles.data}>{link.name}</div>
       </div>
-      <div className={styles.content}>
-        <span>Марка кабеля: </span>
-        <span>{link.cableBrand}</span>
+      <div className={styles.row}>
+        <div className={styles.caption}>Марка кабеля: </div>
+        <div className={styles.data}>{link.cableBrand}</div>
       </div>
-      <div className={styles.content}>
-        <span>Длина по металлоконструкциям: </span>
-        <span>{link.metalStructursLength}</span>
+      <div className={styles.row}>
+        <div className={styles.caption}>Длина по металлоконструкциям: </div>
+        <div className={styles.data}>{link.metalStructursLength}</div>
       </div>
-      <div className={styles.content}>
-        <span>Длина в гофротрубе: </span>
-        <span>{link.cableChannelLength}</span>
+      <div className={styles.row}>
+        <div className={styles.caption}>Длина в гофротрубе: </div>
+        <div className={styles.data}>{link.cableChannelLength}</div>
       </div>
-      <div className={styles.content}>
-        <span>Запас на разделку и подключение: </span>
-        <span>{link.reserveLength}</span>
+      <div className={styles.row}>
+        <div className={styles.caption}>Запас на разделку и подключение: </div>
+        <div className={styles.data}>{link.reserveLength}</div>
       </div>
-      <div className={styles.content}>
-        <span>Количество кусков: </span>
-        <span>{link.parts}</span>
+      <div className={styles.row}>
+        <div className={styles.caption}>Количество кусков: </div>
+        <div className={styles.data}>{link.parts}</div>
       </div>
-      <div className={styles.content}>
-        <span>Длина всего: </span>
-        <span>{link.length}</span>
+      <div className={styles.row}>
+        <div className={styles.caption}>Длина всего: </div>
+        <div className={styles.data}>{link.length}</div>
       </div>
-      <div className={styles.content}>
-        <span>Описание: </span>
-        <span>{link.description}</span>
+      <div className={styles.row}>
+        <div className={styles.caption}>Описание: </div>
+        <div className={styles.data}>{link.description}</div>
       </div>
     </div>
   );

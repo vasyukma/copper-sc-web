@@ -1,0 +1,12 @@
+.Block {
+  display: flex;
+  justify-content: center;
+}
+
+.Block_theme_default {
+  background-color: lightblue;
+}
+
+.Block__text {
+  margin: 5px;
+}

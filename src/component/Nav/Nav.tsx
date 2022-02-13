@@ -6,27 +6,30 @@ export default Navi;
 
 function Navi() {
   return (
-    <div className={styles.wrapper}>
-      <div className={styles.content}>
-        {/* <nav> */}
-        <div className={styles.element}>
-          <Item to="/">Home</Item>
+    <div className={styles.Block}>
+      <div className={styles.navigationWrapper}>
+        <div className={styles.navigation}>
+          {/* <nav> */}
+          <div className={styles.element}>
+            <Item to="/">Home</Item>
+          </div>
+          <div className={styles.element}>
+            <Item to="/cable-list">Кабельный журнал</Item>
+          </div>
+          <div className={styles.element}>
+            <Item to="/labels">Этикирование</Item>
+          </div>
+          <div className={styles.element}>
+            <Item to="/node-explorer">Узлы</Item>
+          </div>
+          <div className={styles.element}>
+            <Item to="/links">Линии</Item>
+          </div>
         </div>
-        <div className={styles.element}>
-          <Item to="/cable-list">Кабельный журнал</Item>
-        </div>
-        <div className={styles.element}>
-          <Item to="/labels">Этикирование</Item>
-        </div>
-        <div className={styles.element}>
-          <Item to="/node-explorer">Узлы</Item>
-        </div>
-        <div className={styles.element}>
-          <Item to="/links">Линии</Item>
-        </div>
-        {/* </nav> */}
       </div>
-      <Outlet />
+      <div className={styles.content}>
+        <Outlet />
+      </div>
     </div>
   );
 }

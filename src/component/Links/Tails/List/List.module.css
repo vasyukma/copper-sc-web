@@ -1,9 +1,6 @@
-.wrapper {
+.element {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: greenyellow;
-}
-
-.element {
+  /* background-color: greenyellow; */
 }

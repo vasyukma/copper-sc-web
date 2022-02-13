@@ -1,11 +1,25 @@
-.wrapper {
+.link_name {
   padding: 0px 5px 0px 5px;
+  min-width: 80px;
 }
 
-.wrapper:hover {
-  background-color: orange;
+.link_description {
+  max-width: 300px;
+}
+
+.wrapper:nth-child(odd) {
+  background-color: rgb(255, 243, 140);
+}
+
+.item:hover {
+  background-color: rgb(255, 219, 151);
+}
+
+.item {
+  display: flex;
+  /* padding: 0px 5px 0px 5px; */
 }
 
 .selected {
-  background-color: orangered;
+  background-color: rgb(255, 192, 192);
 }

@@ -1,3 +1,4 @@
+import './App.css';
 import { Route, Routes } from 'react-router-dom';
 import styles from './App.module.css';
 import Labels from './component/Labels/Labels';

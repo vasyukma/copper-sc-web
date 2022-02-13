@@ -1,19 +1,14 @@
-import { FC } from 'react';
-import { INode } from '../../../model/Node';
+import { FC, useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { copperSkApi } from '../../../service/CopperSkService';
+import { setCurrentNode } from '../../../store/reducer/nodeExplorerSlice';
+import ElementTitle from '../../common/elementTitle/ElementTitle';
 import Branch from './Branch/Branch';
 import styles from './Tree.module.css';
-import { copperSkApi } from '../../../service/CopperSkService';
-import { useEffect } from 'react';
-import { setCurrentNode } from '../../../store/reducer/nodeExplorerSlice';
-import { useDispatch } from 'react-redux';
-import { useSelector } from 'react-redux';
-import { RootState } from '../../../store/store';
 
-interface ITree {
-  // root: INode;
-}
+interface IProps {}
 
-const Tree: FC<ITree> = ({}) => {
+const Tree: FC<IProps> = ({}) => {
   const dispatch = useDispatch();
 
   const {
@@ -27,7 +22,8 @@ const Tree: FC<ITree> = ({}) => {
   }, []);
 
   return (
-    <div className={styles.wrapper}>
+    <div className={styles.Block}>
+      <ElementTitle titleText="Места хранения" />
       <div className={styles.data}>
         {rootNode && <Branch node={rootNode} indent="" />}
       </div>

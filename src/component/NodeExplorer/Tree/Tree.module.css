@@ -1,13 +1,11 @@
-.wrapper {
+.Block {
   display: flex;
-  height: 100%;
+  flex-direction: column;
+  /* height: 100%; */
   overflow-y: scroll;
 }
 
 .data {
   display: flex;
   flex-direction: column;
-
-  /* background-color: blue;
-  margin: 5px; */
 }
