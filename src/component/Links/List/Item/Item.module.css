@@ -11,8 +11,12 @@
   background-color: rgb(255, 243, 140);
 }
 
+.wrapper:nth-child(even) {
+  background-color: rgb(233, 223, 130);
+}
+
 .item:hover {
-  background-color: rgb(255, 219, 151);
+  background-color: rgb(252, 191, 79);
 }
 
 .item {
