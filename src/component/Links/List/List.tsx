@@ -1,8 +1,8 @@
 import { FC } from 'react';
-import styles from './List.module.css';
-import { Item } from './Item/Item';
+import appStyles from '../../../App.module.css';
 import { copperSkApi } from '../../../service/CopperSkService';
 import ElementTitle from '../../common/elementTitle/ElementTitle';
+import { Item } from './Item/Item';
 
 interface IProps {}
 export const List: FC<IProps> = ({}) => {
@@ -13,25 +13,21 @@ export const List: FC<IProps> = ({}) => {
   } = copperSkApi.useFetchAllLinksQuery('%');
 
   return (
-    // <div className={styles.wrapper}>
-
-    // <div className="simple-list">
-    <div className="simple-list">
-      {/* <div className="element-title element-title--theme-default">
-        <div className="element-title__text">Линии</div>
-      </div> */}
+    <div className={appStyles.SimpleList}>
       <ElementTitle titleText="Линии" />
-      {/* <div className={styles.list}> */}
-      <div className="simple-list__header">
-        <div className="simple-list__name-header simple-list--name-column-size">
+      <div className={appStyles.SimpleList_header}>
+        <div
+          className={`${appStyles.SimpleList_header} ${appStyles.SimpleList__nameColumnSize}`}
+        >
           Имя
         </div>
-        <div className="simple-list__description-header simple-list--description-column-size">
+        <div
+          className={`${appStyles.SimpleList_descriptionHeader} ${appStyles.SimpleList__descriptionColumnSize}`}
+        >
           Комментарий
         </div>
       </div>
-      {/* <div className= */}
-      <div className="simple-list__data">
+      <div className={`${appStyles.SimpleList_data}`}>
         {links?.map((link) => {
           return <Item link={link} />;
         })}

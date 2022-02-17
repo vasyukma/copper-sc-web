@@ -1,6 +1,6 @@
 import './App.css';
-import { Route, Routes } from 'react-router-dom';
 import styles from './App.module.css';
+import { Route, Routes } from 'react-router-dom';
 import Labels from './component/Labels/Labels';
 import Links from './component/Links/Links';
 import Nav from './component/Nav/Nav';

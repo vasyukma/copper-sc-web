@@ -1,9 +1,10 @@
 import { FC, useEffect, useState } from 'react';
-import { ILink } from '../../../../model/Link';
-import styles from './Item.module.css';
 import { useDispatch, useSelector } from 'react-redux';
-import { RootState } from '../../../../store/store';
+import appStyles from '../../../../App.module.css';
+import { ILink } from '../../../../model/Link';
 import { setCurrentLink } from '../../../../store/reducer/linksSlice';
+import { RootState } from '../../../../store/store';
+import styles from './Item.module.css';
 
 interface IProps {
   link: ILink;
@@ -23,18 +24,19 @@ export const Item: FC<IProps> = ({ link }) => {
   });
 
   return (
-    // <div className={styles.wrapper}>
     <div className={styles.wrapper}>
       <div
         className={itemStyles}
         onClick={() => dispatch(setCurrentLink(link))}
       >
-        {/* <span className={styles.link_name}>{link.name}</span> */}
-        <div className="simple-list simple-list--name-column-size">
+        <div
+          className={`${appStyles.SimpleList} ${appStyles.SimpleList__nameColumnSize}`}
+        >
           {link.name}
         </div>
-        {/* <span className={styles.link_description}>{link.description}</span> */}
-        <div className="simple-list simple-list--description-column-size">
+        <div
+          className={`${appStyles.SimpleList} ${appStyles.SimpleList__descriptionColumnSize}`}
+        >
           {link.description}
         </div>
       </div>

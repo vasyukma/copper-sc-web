@@ -1,10 +1,7 @@
-.Block {
+.__wrapper {
   display: flex;
-  /* flex-direction: column; */
   flex-wrap: wrap;
-  /* justify-content: stretch; */
   align-content: flex-start;
-  /* align-items: stretch; */
 }
 
 .navigationWrapper {
@@ -13,8 +10,6 @@
 }
 
 .navigation {
-  /* height: 40px; */
-  /* width: 100%; */
   font-size: 25px;
   display: flex;
   margin: 1px;
@@ -25,11 +20,10 @@
   font-weight: 600;
 }
 
-.content {
-  /* flex-direction: column; */
+.Content {
+  background-color: aqua;
   width: 100%;
-  /* height: calc(100% - 50px); */
-  height: 100%;
+  height: calc(100% - 56px);
 }
 
 @media print {

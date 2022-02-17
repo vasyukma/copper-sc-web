@@ -6,10 +6,9 @@ export default Navi;
 
 function Navi() {
   return (
-    <div className={styles.Block}>
+    <div className={styles.__wrapper}>
       <div className={styles.navigationWrapper}>
         <div className={styles.navigation}>
-          {/* <nav> */}
           <div className={styles.element}>
             <Item to="/">Home</Item>
           </div>
@@ -27,7 +26,7 @@ function Navi() {
           </div>
         </div>
       </div>
-      <div className={styles.content}>
+      <div className={styles.Content}>
         <Outlet />
       </div>
     </div>

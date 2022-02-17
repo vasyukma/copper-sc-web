@@ -1,13 +1,12 @@
-.wrapper {
+.__wrapper {
   display: flex;
-  /* justify-content: center; */
   flex-direction: column;
-  height: calc(100% - 56px);
+  height: 100%;
   background-color: goldenrod;
   margin: 1px;
 }
 
-.content {
+.Content {
   display: flex;
   height: calc(100% - 55px);
 }
@@ -21,4 +20,14 @@
 .item {
   margin: 1px;
   min-width: 180px;
+}
+
+.LinksList {
+  flex: 3 0;
+  /* height: 100%; */
+}
+
+.NodesTree {
+  flex: 1 0;
+  /* height: 100%; */
 }

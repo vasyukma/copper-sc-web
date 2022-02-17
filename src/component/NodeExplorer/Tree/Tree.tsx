@@ -22,9 +22,9 @@ const Tree: FC<IProps> = ({}) => {
   }, []);
 
   return (
-    <div className={styles.Block}>
+    <div className={styles.__wrapper}>
       <ElementTitle titleText="Места хранения" />
-      <div className={styles.data}>
+      <div className={styles.Tree}>
         {rootNode && <Branch node={rootNode} indent="" />}
       </div>
     </div>

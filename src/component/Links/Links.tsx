@@ -7,26 +7,26 @@ import { Tails } from './Tails/Tails';
 
 export const Links = () => {
   return (
-    <div className={styles.wrapper}>
+    <div className={styles.__wrapper}>
       <div className={styles.control_panel}>
         <ControlPanel />
       </div>
-      {/* <div className={styles.content}> */}
-      <div className="links-page__data">
+      <div className={styles.Content}>
+        {/* <div className="links-page__data"> */}
         {/* <div className={styles.item}> */}
         <div className="links-page__link-information">
           <Form />
         </div>
-        {/* <div className={styles.item}> */}
-        <div className="links-page__links-list">
+        <div className={styles.LinksList}>
+          {/* <div className="links-page__links-list"> */}
           <List />
         </div>
         {/* <div className={styles.item}> */}
         <div className="links-page__tails-list">
           <Tails />
         </div>
-        {/* <div className={styles.item}> */}
-        <div className="links-page__nodes-tree">
+        <div className={styles.NodesTree}>
+          {/* <div className="links-page__nodes-tree"> */}
           <Tree />
         </div>
       </div>
