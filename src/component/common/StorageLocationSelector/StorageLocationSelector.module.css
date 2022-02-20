@@ -1,0 +1,17 @@
+.__wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow-y: auto;
+  background-color: brown;
+}
+
+.Path {
+  /* height: 100px; */
+  background-color: aqua;
+}
+
+.Children {
+  /* height: 100px; */
+  background-color: blueviolet;
+}

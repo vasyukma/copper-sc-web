@@ -4,6 +4,7 @@ import { INode, INodeForCreateAndUpdate } from '../model/Node';
 import { ITail, ITailForCreateAndUpdate } from '../model/Tail';
 import { INodePath } from '../model/NodePath';
 import { INodeType } from '../model/NodeType';
+import { ServiceData } from '../model/ServiceData';
 
 export const copperSkApi = createApi({
   reducerPath: 'copperSkApi',
@@ -64,11 +65,6 @@ export const copperSkApi = createApi({
       }),
       providesTags: (result) => ['Nodes'],
     }),
-    // fetchTextPathNode: build.query<INodePath, number>({
-    //   query: (nodeId) => ({
-    //     url: `/nodes/${nodeId}/text-path`,
-    //   }),
-    // }),
     fetchNodeParentsCount: build.query<number, number>({
       query: (nodeId) => ({
         url: `/nodes/${nodeId}/parents-count`,
@@ -103,9 +99,9 @@ export const copperSkApi = createApi({
       }),
       invalidatesTags: ['Nodes'],
     }),
-    fetchAllNodeTypes: build.query<INodeType[], string>({
+    fetchAllNodeTypes: build.query<ServiceData<INodeType>, string>({
       query: () => ({
-        url: `/node-types`,
+        url: `/node-types?sort=shortName`,
       }),
       providesTags: (result) => ['NodeTypes'],
     }),

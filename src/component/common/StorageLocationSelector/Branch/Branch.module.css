@@ -1,0 +1,26 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  user-select: none;
+}
+
+.data {
+  display: flex;
+}
+
+.data:hover {
+  background-color: rgb(238, 144, 238);
+}
+
+.active {
+  background-color: coral;
+}
+
+.indent {
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+.branch_content {
+}

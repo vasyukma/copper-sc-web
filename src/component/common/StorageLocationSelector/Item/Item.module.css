@@ -1,0 +1,19 @@
+.__wrapper {
+  /* display: flex; */
+  /* background-color: rgb(146, 182, 185); */
+  /* margin-left: 2px; */
+  /* margin-right: 2px; */
+  display: flex;
+  /* justify-content: center; */
+  /* width: 100%; */
+  /* flex: 1; */
+}
+
+.active {
+  /* background-color: coral; */
+}
+
+.content {
+  /* background-color: deeppink; */
+  flex: 1 0;
+}

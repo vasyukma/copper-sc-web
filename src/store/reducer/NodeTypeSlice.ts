@@ -1,6 +1,5 @@
+import { createSlice } from '@reduxjs/toolkit';
 import { INodeType } from '../../model/NodeType';
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-// import { fetchNodeTypes } from './ActionCreators';
 
 interface NodeTypeState {
   nodeTypes: INodeType[];
@@ -17,37 +16,8 @@ const initialState: NodeTypeState = {
 export const nodeTypeSlice = createSlice({
   name: 'nodeType',
   initialState,
-  reducers: {
-    // nodeTypesFetching(state) {
-    //   state.isLoading = true;
-    // },
-    // nodeTypesFetchingSuccess(state, action: PayloadAction<INodeType[]>) {
-    //   state.isLoading = false;
-    //   state.error = '';
-    //   state.nodeTypes = action.payload;
-    // },
-    // nodeTypesFetchingError(state, action: PayloadAction<string>) {
-    //   state.isLoading = false;
-    //   state.error = action.payload;
-    // },
-  },
-  extraReducers: {
-    // [fetchNodeTypes.fulfilled.type]: (
-    //   state,
-    //   action: PayloadAction<INodeType[]>
-    // ) => {
-    //   state.isLoading = false;
-    //   state.error = '';
-    //   state.nodeTypes = action.payload;
-    // },
-    // [fetchNodeTypes.pending.type]: (state) => {
-    //   state.isLoading = true;
-    // },
-    // [fetchNodeTypes.rejected.type]: (state, action: PayloadAction<string>) => {
-    //   state.isLoading = false;
-    //   state.error = action.payload;
-    // },
-  },
+  reducers: {},
+  extraReducers: {},
 });
 
 export default nodeTypeSlice.reducer;

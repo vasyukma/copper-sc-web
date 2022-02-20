@@ -21,10 +21,8 @@ const nodeExplorerSlice = createSlice({
   reducers: {
     setCurrentNode(state, action) {
       state.currentNode = action.payload;
-      // if (state.isEditNode) {
       state.isEditNode = false;
       state.isCreateNode = false;
-      // }
     },
     setSelectedNode(state, action) {
       state.selectedNode = action.payload;
@@ -39,21 +37,6 @@ const nodeExplorerSlice = createSlice({
       state.isEditNode = false;
       state.isCreateNode = false;
     },
-    // toggleIsEditNode(state) {
-    //   if (state.isEditNode) {
-    //     state.isEditNode = false;
-    //   } else {
-    //     state.isEditNode = true;
-    //   }
-    // },
-
-    // toggleIsCreateNode(state) {
-    //   if (state.isCreateNode) {
-    //     state.isCreateNode = false;
-    //   } else {
-    //     state.isCreateNode = true;
-    //   }
-    // },
   },
 });
 
@@ -64,7 +47,5 @@ export const {
   setSelectedNode,
   setIsEditNode,
   setIsCreateNode,
-  // toggleIsCreateNode,
-  // toggleIsEditNode,
   offCreateEditNode,
 } = nodeExplorerSlice.actions;

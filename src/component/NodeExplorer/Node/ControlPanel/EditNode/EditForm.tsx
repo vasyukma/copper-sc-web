@@ -104,8 +104,8 @@ export const EditFrom: FC<IProps> = ({ node, title }) => {
               value={nodeTypeId}
               onChange={handleChangeNodeType}
             >
-              {nodeTypes &&
-                nodeTypes.map((nodeType) => {
+              {nodeTypes?.content &&
+                nodeTypes.content.map((nodeType) => {
                   if (nodeType.id === node.type.id)
                     return (
                       <option value={nodeType.id} selected>
