@@ -1,28 +1,28 @@
-import { FC } from "react";
-import styles from "./Item.module.css";
-import { ILink } from "../../../../model/Link";
+import { FC } from 'react';
+import { ICableListItem } from '../../../../model/CableListItem';
+import styles from './Item.module.css';
 
 interface IProps {
-  link: ILink;
+  item: ICableListItem;
 }
-export const Item: FC<IProps> = ({ link }) => {
+export const Item: FC<IProps> = ({ item }) => {
   return (
     <tr className={styles.td}>
-      <td></td>
-      <td>{link.name}</td>
-      <td>111</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td>{item.roomName}</td>
+      <td>{item.link.name}</td>
+      <td>{item.socketNumber}</td>
+      <td>{item.telecommunicationsClosetNumber}</td>
+      <td>{item.patchPanelNumber}</td>
+      <td>{item.portNumber}</td>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
-      <td>{link.description}</td>
+      <td></td>
+      <td></td>
+      <td>{item.link.description}</td>
     </tr>
   );
 };

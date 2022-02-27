@@ -1,11 +1,11 @@
-import { FC } from "react";
-import styles from "./List.module.css";
-import { Item } from "./Item/Item";
-import { copperSkApi } from "../../../service/CopperSkService";
+import { FC } from 'react';
+import styles from './List.module.css';
+import { Item } from './Item/Item';
+import { copperSkApi } from '../../../service/CopperSkService';
 
 interface IProps {}
 export const List: FC<IProps> = ({}) => {
-  const { data: links } = copperSkApi.useFetchAllLinksQuery("%");
+  const { data: cableList } = copperSkApi.useFetchAllCableListQuery('%');
   return (
     <div className={styles.wrapper}>
       <div className={styles.content}>
@@ -27,7 +27,8 @@ export const List: FC<IProps> = ({}) => {
             <th>Наименование цели</th>
             <th>Примечание</th>
           </tr>
-          {links && links.map((link) => <Item link={link} />)}
+          {cableList &&
+            cableList.map((cableListItem) => <Item item={cableListItem} />)}
         </table>
       </div>
     </div>

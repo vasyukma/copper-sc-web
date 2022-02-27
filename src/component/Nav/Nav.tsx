@@ -24,6 +24,9 @@ function Navi() {
           <div className={styles.element}>
             <Item to="/links">Линии</Item>
           </div>
+          <div className={styles.element}>
+            <Item to="/crossing">Кроссировка</Item>
+          </div>
         </div>
       </div>
       <div className={styles.Content}>

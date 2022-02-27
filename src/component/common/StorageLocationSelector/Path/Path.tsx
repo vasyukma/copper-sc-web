@@ -8,6 +8,7 @@ import { INode } from '../../../../model/Node';
 import { Item } from '../Item/Item';
 import { useDispatch } from 'react-redux';
 import {
+  setCurrentStorageLocation,
   setSelectedStorageLocation,
   setSelectedStorageLocationChild,
 } from '../../../../store/reducer/storageLocationSelectorSlice';
@@ -44,6 +45,7 @@ export const Path: FC<IProps> = ({ currentStorageLocation }) => {
                 onClick={() =>
                   dispatch(setSelectedStorageLocation(storageLocation))
                 }
+                onDoubleClick={() => dispatch(setCurrentStorageLocation)}
               />
             ))
             .reverse()}

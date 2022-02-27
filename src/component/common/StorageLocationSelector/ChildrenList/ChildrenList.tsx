@@ -20,7 +20,11 @@ export const ChildrenList: FC<IProps> = ({ currentStorageLocation }) => {
     <div className={styles.__wrapper}>
       {storageLocationChildren &&
         storageLocationChildren.map((storageLocation) => (
-          <Item storageLocation={storageLocation} onClick={() => alert('!')} />
+          <Item
+            storageLocation={storageLocation}
+            onClick={() => alert('!')}
+            onDoubleClick={() => {}}
+          />
         ))}
       <div className={styles.item}></div>
     </div>

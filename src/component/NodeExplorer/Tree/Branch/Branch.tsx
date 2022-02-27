@@ -47,7 +47,6 @@ const Branch: FC<IBranchProps> = ({ node, indent }) => {
         onClick={() => dispatch(setCurrentNode(node))}
       >
         <div className={styles.indent}>{indent}</div>
-        {/* <button onClick={onShowSubBranches}>+</button> */}
         <Item node={node} />
       </div>
       <div className={styles.branch_content}>

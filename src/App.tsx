@@ -7,6 +7,7 @@ import Nav from './component/Nav/Nav';
 import Explorer from './component/NodeExplorer/Explorer';
 import Nodes from './component/Nodes/Nodes';
 import { CableList } from './component/CableList/CableList';
+import Crossing from './component/Crossing/Crossing';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
             <Route path="/nodes" element={<Nodes />} />
             <Route path="/nodes/:id" element={<Nodes />} />
             <Route path="/links" element={<Links />} />
+            <Route path="/crossing" element={<Crossing />} />
           </Route>
         </Routes>
       </div>

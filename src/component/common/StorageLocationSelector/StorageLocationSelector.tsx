@@ -19,11 +19,11 @@ const StorageLocationSelector: FC<IProps> = ({}) => {
 
   const { data: rootStorageLocation } = copperSkApi.useFetchRootNodeQuery('');
 
-  useEffect(() => {
-    if (!currentStorageLocation) {
-      dispatch(setCurrentStorageLocation(rootStorageLocation));
-    }
-  });
+  // useEffect(() => {
+  //   // if (!currentStorageLocation) {
+  //   dispatch(setCurrentStorageLocation(rootStorageLocation));
+  //   // }
+  // }, []);
 
   return (
     <div className={styles.__wrapper}>
@@ -32,11 +32,17 @@ const StorageLocationSelector: FC<IProps> = ({}) => {
         {currentStorageLocation && (
           <Path currentStorageLocation={currentStorageLocation} />
         )}
+        {!currentStorageLocation && rootStorageLocation && (
+          <Path currentStorageLocation={rootStorageLocation} />
+        )}
       </div>
       <div>---------------</div>
       <div className={styles.Children}>
         {currentStorageLocation && (
           <ChildrenList currentStorageLocation={currentStorageLocation} />
+        )}
+        {!currentStorageLocation && rootStorageLocation && (
+          <ChildrenList currentStorageLocation={rootStorageLocation} />
         )}
       </div>
     </div>

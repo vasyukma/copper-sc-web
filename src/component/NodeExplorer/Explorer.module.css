@@ -1,14 +1,17 @@
-.wrapper {
+.__wrapper {
   display: flex;
   margin: 1px;
-  min-width: 1920px;
+  /* min-width: 1920px; */
   background-color: beige;
   border: 1px solid grey;
   border-radius: 5px;
+  height: 100%;
 }
 
 .tree {
   background-color: rgb(225, 232, 247);
+  min-width: 200px;
+  /* overflow-y: scroll; */
 }
 
 .data {

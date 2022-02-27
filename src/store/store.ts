@@ -4,12 +4,14 @@ import linksSlice from './reducer/linksSlice';
 import nodeExplorerSlice from './reducer/nodeExplorerSlice';
 import nodeTypeReducer from './reducer/NodeTypeSlice';
 import storageLocationSelectorSlice from './reducer/storageLocationSelectorSlice';
+import crossingSlice from './reducer/crossingSlice';
 
 const rootReducer = combineReducers({
   linksSlice,
   nodeExplorerSlice,
   nodeTypeReducer,
   storageLocationSelectorSlice,
+  crossingSlice,
   [copperSkApi.reducerPath]: copperSkApi.reducer,
 });
 

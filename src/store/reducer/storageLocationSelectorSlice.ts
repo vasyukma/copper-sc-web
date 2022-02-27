@@ -7,7 +7,7 @@ interface IInitialState {
   selectedStorageLocationChild: INode | undefined;
 }
 
-const initalState: IInitialState = {
+const initialState: IInitialState = {
   currentStorageLocation: undefined,
   selectedStorageLocation: undefined,
   selectedStorageLocationChild: undefined,
@@ -15,7 +15,7 @@ const initalState: IInitialState = {
 
 const storageLocationSelectorSlice = createSlice({
   name: 'storageLocationsSelector',
-  initialState: initalState,
+  initialState,
   reducers: {
     setCurrentStorageLocation(state, action) {
       state.currentStorageLocation = action.payload;

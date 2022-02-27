@@ -5,6 +5,8 @@ import { ITail, ITailForCreateAndUpdate } from '../model/Tail';
 import { INodePath } from '../model/NodePath';
 import { INodeType } from '../model/NodeType';
 import { ServiceData } from '../model/ServiceData';
+import { ICrossType } from '../model/CrossType';
+import { ICableListItem } from '../model/CableListItem';
 
 export const copperSkApi = createApi({
   reducerPath: 'copperSkApi',
@@ -12,7 +14,7 @@ export const copperSkApi = createApi({
     // baseUrl: 'http://localhost:8080/api/v0',
     baseUrl: 'http://192.168.30.149:18090/api/v0',
   }),
-  tagTypes: ['Links', 'Tails', 'Nodes', 'NodeTypes'],
+  tagTypes: ['Links', 'Tails', 'Nodes', 'NodeTypes', 'Crossing', 'CableList'],
   endpoints: (build) => ({
     fetchAllLinks: build.query<ILink[], string>({
       query: (nameFilter) => ({
@@ -110,6 +112,23 @@ export const copperSkApi = createApi({
         url: `/nodes/${nodeId}/tails`,
       }),
       providesTags: (result) => ['Nodes'],
+    }),
+    postCrossType: build.mutation<ICrossType, ICrossType>({
+      query: (crossType) => ({
+        url: `/cross-types`,
+        method: 'POST',
+        body: crossType,
+      }),
+      invalidatesTags: ['Crossing'],
+    }),
+    fetchAllCableList: build.query<ICableListItem[], string>({
+      query: (filter) => ({
+        url: `/cable-list`,
+        params: {
+          name: filter,
+        },
+      }),
+      providesTags: (result) => ['CableList'],
     }),
   }),
 });

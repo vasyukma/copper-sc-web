@@ -10,8 +10,13 @@ import { useState } from 'react';
 interface IProps {
   storageLocation: INode;
   onClick: Function;
+  onDoubleClick: Function;
 }
-export const Item: React.FC<IProps> = ({ storageLocation, onClick }) => {
+export const Item: React.FC<IProps> = ({
+  storageLocation,
+  onClick,
+  onDoubleClick,
+}) => {
   const dispatch = useDispatch();
 
   const { selectedStorageLocation } = useSelector(
@@ -21,10 +26,11 @@ export const Item: React.FC<IProps> = ({ storageLocation, onClick }) => {
   const [stylesItem, setStylesItem] = useState(appStyles.SimpleList_list);
 
   useEffect(() => {
-    debugger;
+    // debugger;
     selectedStorageLocation?.id === storageLocation.id
       ? setStylesItem(
-          `${appStyles.SimpleList_list} ${appStyles.SimpleList_selected}`
+          // `${appStyles.SimpleList_list} ${appStyles.SimpleList_selected}`
+          `${appStyles.SimpleList_selected}`
         )
       : setStylesItem(appStyles.SimpleList_list);
   });
@@ -34,7 +40,11 @@ export const Item: React.FC<IProps> = ({ storageLocation, onClick }) => {
       className={stylesItem}
       onDoubleClick={() => dispatch(setCurrentStorageLocation(storageLocation))}
     >
-      <div className={appStyles.SimpleList_item} onClick={() => onClick()}>
+      <div
+        className={appStyles.SimpleList_item}
+        onClick={() => onClick()}
+        onDoubleClick={() => onDoubleClick()}
+      >
         {`${storageLocation.type.shortName} ${storageLocation.shortName}`}
       </div>
     </div>

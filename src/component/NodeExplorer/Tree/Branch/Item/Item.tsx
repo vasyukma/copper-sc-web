@@ -9,7 +9,7 @@ export const Item: React.FC<IProps> = ({ node }) => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.content}>
-        {`${node.type.shortName} ${node.shortName}`}
+        {`${node.type.shortName} ${node.shortName} ${node.description}`}
       </div>
     </div>
   );
