@@ -9,6 +9,25 @@
   height: 100%;
 }
 
+.Btn {
+  background-color: azure;
+  cursor: default;
+  user-select: none;
+}
+
+.Btn:hover {
+  background-color: aqua;
+}
+
+.Btn:active {
+  background-color: bisque;
+}
+
+.Btn__caption {
+  padding: 2px;
+  /* background-color: brown; */
+}
+
 .SimpleList {
   display: flex;
   flex-direction: column;

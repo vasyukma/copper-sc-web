@@ -6,6 +6,7 @@ import { ITail } from '../../model/Tail';
 interface IInitialState {
   currentLink: ILink | undefined;
   currentTail: ITail | undefined;
+  // selectedTail: ITail | undefined;
   selectedPathNode: INode | undefined;
   selectedNodeChildren: INode | undefined;
   selectedChildNode: INode | undefined;
@@ -16,6 +17,7 @@ interface IInitialState {
 const initialState: IInitialState = {
   currentLink: undefined,
   currentTail: undefined,
+  // selectedTail: undefined,
   selectedPathNode: undefined,
   selectedNodeChildren: undefined,
   selectedChildNode: undefined,
@@ -34,6 +36,9 @@ export const linksSlice = createSlice({
     setCurrentTail(state, action) {
       state.currentTail = action.payload;
     },
+    // setSelectedTail(state, action) {
+    //   state.selectedTail = action.payload;
+    // },
     setSelectedPathNode(state, action) {
       state.selectedPathNode = action.payload;
     },
@@ -61,6 +66,7 @@ export default linksSlice.reducer;
 export const {
   setCurrentLink,
   setCurrentTail,
+  // setSelectedTail,
   setSelectedPathNode,
   setSelectedNodeChildren,
   setSelectedChildNode,

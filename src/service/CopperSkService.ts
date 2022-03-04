@@ -31,14 +31,6 @@ export const copperSkApi = createApi({
       }),
       providesTags: (result) => ['Tails', 'Links', 'Nodes'],
     }),
-    postTail: build.mutation<ITail, ITailForCreateAndUpdate>({
-      query: (tail) => ({
-        url: `/tails`,
-        method: 'POST',
-        body: tail,
-      }),
-      invalidatesTags: ['Tails'],
-    }),
     putLink: build.mutation<ILink, ILinkForCreateAndUpdate>({
       query: (link) => ({
         url: `/links`,
@@ -120,6 +112,22 @@ export const copperSkApi = createApi({
         body: crossType,
       }),
       invalidatesTags: ['Crossing'],
+    }),
+    postTail: build.mutation<ITail, ITailForCreateAndUpdate>({
+      query: (tail) => ({
+        url: `/tails`,
+        method: 'POST',
+        body: tail,
+      }),
+      invalidatesTags: ['Tails'],
+    }),
+    putTail: build.mutation<ITail, ITailForCreateAndUpdate>({
+      query: (tail) => ({
+        url: `/tails`,
+        method: 'PUT',
+        body: tail,
+      }),
+      invalidatesTags: ['Tails'],
     }),
     fetchAllCableList: build.query<ICableListItem[], string>({
       query: (filter) => ({

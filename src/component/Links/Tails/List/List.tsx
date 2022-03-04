@@ -2,8 +2,9 @@ import { FC } from 'react';
 import { ILink } from '../../../../model/Link';
 import { copperSkApi } from '../../../../service/CopperSkService';
 import ElementTitle from '../../../common/elementTitle/ElementTitle';
-import ControlPanel from './ControlPanel/ControlPanel';
+import ControlPanel from '../ControlPanel/ControlPanel';
 import { Item } from './Item/Item';
+
 import styles from './List.module.css';
 
 interface IProps {
@@ -14,13 +15,9 @@ export const List: FC<IProps> = ({ link }) => {
 
   return (
     <div className={styles.element}>
-      {/* <div className="element-title element-title--theme-default">
-        <div className="element-title__text">Концы линии</div>
-      </div> */}
-
-      <div className={styles.controlPanel}>
+      {/* <div className={styles.controlPanel}>
         <ControlPanel />
-      </div>
+      </div> */}
       {tails && (
         <div className={styles.element}>
           {tails.map((tail) => (

@@ -13,23 +13,17 @@ export const Links = () => {
         <ControlPanel />
       </div>
       <div className={styles.Content}>
-        {/* <div className="links-page__data"> */}
-        {/* <div className={styles.item}> */}
         <div className="links-page__link-information">
           <Form />
         </div>
         <div className={styles.LinksList}>
-          {/* <div className="links-page__links-list"> */}
           <List />
         </div>
-        {/* <div className={styles.item}> */}
         <div className="links-page__tails-list">
           <Tails />
         </div>
         <div className={styles.StorageLocationSelector}>
-          {/* <div className="links-page__nodes-tree"> */}
           <Tree />
-          {/* <StorageLocationSelector /> */}
         </div>
       </div>
     </div>

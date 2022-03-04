@@ -1,8 +1,5 @@
-.wrapper {
+.__wrapper {
   display: flex;
   background-color: lightcoral;
   margin: 2px;
-}
-
-.item {
 }
